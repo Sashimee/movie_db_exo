@@ -21,9 +21,10 @@
         $response = json_decode($response_json, true);
         if (isset($response['status_code'])) {
             echo $response['status_code'];
-            echo 'movie not found';
+            echo 'movie not found' . '<br>';
         } else {
-            var_dump($response);
+            echo $response['original_title'];
+            // var_dump($response);
         }
     }
     ?>
