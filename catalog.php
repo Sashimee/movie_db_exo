@@ -35,6 +35,15 @@
                                 <img class="poster" src="' . $image . '">
                             </div>        
                         </div>
+                        <div class="card info">
+                            <div class="card-content">
+                                <h6>' . $row['title'] . '</h6>
+                                <p>' . $row['rating'] . '/10' . '</p>
+                                <p>' . $row['release_date'] . '</p>
+                                <p>' . $row['category'] . '</p>
+                                <p>' . $row['synopsis'] . '</p>
+                            </div>
+                        </div>
                     </div>';
                 } elseif ($title) {
                     echo '
@@ -45,6 +54,15 @@
                                <span class="card-title">' . $row['title'] . '</span>
                             </div>        
                         </div>
+                        <div class="card info">
+                            <div class="card-content">
+                                <h6>' . $row['title'] . '</h6>
+                                <p>' . $row['rating'] . '/10' . '</p>
+                                <p>' . $row['release_date'] . '</p>
+                                <p>' . $row['category'] . '</p>
+                                <p>' . $row['synopsis'] . '</p>
+                            </div>
+                        </div>
                     </div>';
                 }
             }
@@ -54,6 +72,7 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/catalogScript.js"></script>
 </body>
 
 </html>
