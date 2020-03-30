@@ -41,7 +41,7 @@
                                 <p>' . $row['rating'] . '/10' . '</p>
                                 <p>' . $row['release_date'] . '</p>
                                 <p>' . $row['category'] . '</p>
-                                <p>' . $row['synopsis'] . '</p>
+                                <p>' . 'Synopsis: '  . $row['synopsis'] . '</p>
                             </div>
                         </div>
                     </div>';
@@ -60,7 +60,7 @@
                                 <p>' . $row['rating'] . '/10' . '</p>
                                 <p>' . $row['release_date'] . '</p>
                                 <p>' . $row['category'] . '</p>
-                                <p>' . $row['synopsis'] . '</p>
+                                <p>' . 'Synopsis: ' . $row['synopsis'] . '</p>
                             </div>
                         </div>
                     </div>';
