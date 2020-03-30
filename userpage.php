@@ -20,7 +20,6 @@ var_dump($user);
 
 <body>
     <form class="formForm" method="post" action="userpage.php">
-        <?php include('errors.php'); ?>
         <div class="input-group">
             <label>Username</label>
             <input type="text" name="username" value="<?php echo $user['username']; ?>" placeholder="<?php echo $user['username']; ?>">
