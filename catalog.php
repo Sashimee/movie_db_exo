@@ -11,8 +11,10 @@
 
 <body id="cat-bod">
     <div class="container">
-        <div class="col s1 card small">
-            TESTING TESTING ONE TWO REEEE
+        <div class="col s1">
+            <div class="card small">
+                TESTING TESTING ONE TWO REEEE
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
