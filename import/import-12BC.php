@@ -18,7 +18,8 @@
         curl_setopt_array($curl, $opts);
         $response = curl_exec($curl);
         curl_close($curl);
-        if ($response['status_code'] == '34') {
+        if (isset($response['status_code'])) {
+            echo $response['status_code'];
             echo 'movie not found';
         } else {
             var_dump($response);
