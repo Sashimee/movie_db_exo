@@ -1,3 +1,4 @@
+<?php  ("nav-bar.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +10,13 @@
 <body>
 
 <nav id="nab-bar">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+    <div class="nav-wrapper grey darken-4">
+      <a href="index.php" class="brand-logo">Anything Movie</a>
+      <a class="center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">        
+        <li><a href="sass.html">Genre</a></li>
+        <li><a href="catalog.php">Movies</a></li>
+        <li><a href="index.php?logout='1'">LogOut</a></li>
       </ul>
     </div>
   </nav>
