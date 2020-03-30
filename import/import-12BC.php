@@ -29,7 +29,7 @@
             echo $response['original_title'];
             echo '<br>';
             // $query = "INSERT INTO movie(title, poster_url, synopsis, category, release_date, rating) VALUES ('" . $response[''] . "','" . $newUserID . "')";
-            mysqli_query($dbConnection, $query);
+            // mysqli_query($dbConnection, $query);
             var_dump($response);
         }
     }
