@@ -1,7 +1,10 @@
 <?php
 session_start();
-$user_check_query = "SELECT * FROM user WHERE user_id='$_SESSION[user_id]'";
+$user_id = $_SESSION['user_id'];
+$user_check_query = "SELECT * FROM user WHERE user_id= . $user_id";
+var_dump($user_check_query);
 $result = mysqli_query($db, $user_check_query);
+var_dump($result);
 $user = mysqli_fetch_assoc($result);
 var_dump($user);
 ?>
