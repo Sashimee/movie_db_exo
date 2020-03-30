@@ -43,7 +43,7 @@ if (isset($_POST['reg_user'])) {
 
     // REGISTER
     if (count($errors) == 0) {
-        $password = ($password_1); //encrypt the password before saving in the database
+        $password = md5($password_1); //encrypt the password before saving in the database
 
         $query = "INSERT INTO user (username, email, password) 
   			  VALUES('$username', '$email', '$password')";
