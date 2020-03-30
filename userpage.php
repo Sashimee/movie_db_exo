@@ -2,7 +2,7 @@
 session_start();
 $user_id = $_SESSION['user_id'];
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-$user_check_query = "SELECT * FROM user WHERE user_id= $user_id";
+$user_check_query = "SELECT * FROM user"; // WHERE user_id= $user_id";
 var_dump($user_check_query);
 $result = mysqli_query($db, $user_check_query);
 var_dump($result);
