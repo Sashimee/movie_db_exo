@@ -84,22 +84,23 @@ form,
   padding: 1rem 0;
   background-color: black;
 }
-.nav-bar,a {
+.nav-bar,
+a {
   color: white;
-  text-decoration: none;    
+  text-decoration: none;
 }
 .navbarSection {
   display: flex;
   justify-content: space-between;
   margin: 0 2rem;
 }
-.navbarSection>ul {
-  display: inline-flex;  
+.navbarSection > ul {
+  display: inline-flex;
 }
-.navbarSection>ul>li {
+.navbarSection > ul > li {
   list-style: none;
-  margin: auto 0.8rem;  
-  border: solid 2px grey;  
+  margin: auto 0.8rem;
+  border: solid 2px grey;
   border-radius: 5px;
   padding: 0.4rem;
   transition: 0.2s ease;
@@ -108,11 +109,4 @@ form,
   list-style: none;
   transition: 0.2s ease;
   transform: scale(1.3, 1.3);
-}
-
-
-/*Poster*/
-.poster {
-  height: 750px;
-  width: 500px;
 }
