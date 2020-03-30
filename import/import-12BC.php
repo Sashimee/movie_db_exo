@@ -9,7 +9,11 @@
 
 <body>
     <?php
-    for ($i = 0; $i < 100; $i++) {
+
+    include_once('../database.php');
+    $dbConnection = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+
+    for ($i = 0; $i < 10; $i++) {
         $curl = curl_init();
         $opts = [
             CURLOPT_URL => 'https://api.themoviedb.org/3/movie/' . $i . '?api_key=330e20146b752354b54e717c2df62353',
@@ -20,14 +24,16 @@
         curl_close($curl);
         $response = json_decode($response_json, true);
         if (isset($response['status_code'])) {
-            echo $response['status_code'];
-            echo 'movie not found' . '<br>';
+            echo 'movie number ' . $i . ' not found' . '<br>';
         } else {
             echo $response['original_title'];
             echo '<br>';
-            // var_dump($response);
+            // $query = "INSERT INTO movie(title, poster_url, synopsis, category, release_date, rating) VALUES ('" . $response[''] . "','" . $newUserID . "')";
+            mysqli_query($dbConnection, $query);
+            var_dump($response);
         }
     }
+    mysqli_close($dbConnection);
     ?>
 </body>
 
