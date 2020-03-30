@@ -101,7 +101,7 @@ a {
   list-style: none;
   margin: auto 0.8rem;
   border: solid 2px grey;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 0.4rem;
   transition: 0.2s ease;
 }
