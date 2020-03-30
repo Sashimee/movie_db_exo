@@ -1,17 +1,24 @@
+<?php
+include('server.php');
+if (isset($_GET['user'])) {
+    $user = $_GET['user'];
+    $get_user = $mysqli->query("SELECT * FROM users WHERE username = '$user'");
+    $user_data = $get_user->fetch_assoc();
+} else {
+    header("Location: index.php");
+} ?>
 <!DOCTYPE html>
 <html>
+   
 
-<head>
+<head>  
     <meta charset="UTF-8">
     <title>Profile Settings</title>
-    <link rel="stylesheet" type="text/css" href="\style\style.css">
-</head>
+       
+</head> 
 
 <body>
-    <div class="header">
-        <h2>Update Information</h2>
-    </div>
-    <form method="post" action="userpage.php">
+    <form method="post" action="register.php">
         <?php include('errors.php'); ?>
         <div class="input-group">
             <label>Email</label>
@@ -26,9 +33,8 @@
             <input type="password" name="password_2">
         </div>
         <div class="input-group">
-            <button type="submit" class="btn" name="update_user">Update</button>
-        </div>
-    </form>
+            <button type="submit" class="btn" name="reg_user">Update</button>
+        </div> 
 </body>
 
 </html>
