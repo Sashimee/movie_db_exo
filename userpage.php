@@ -1,4 +1,5 @@
 <?php
+include_once('database.php');
 session_start();
 $user_id = $_SESSION['user_id'];
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
