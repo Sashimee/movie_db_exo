@@ -1,8 +1,7 @@
 <?php
-session_start();
 $a = session_id();
 var_dump(session_id());
-if (empty($a)) {
+if (!empty($a)) {
     $get_user = $mysqli->query('SELECT * FROM user WHERE session_id ='  . session_id());
     $user_data = $get_user->fetch_assoc();
     var_dump($user_data);
