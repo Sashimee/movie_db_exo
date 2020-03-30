@@ -75,6 +75,8 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
+            $user = mysqli_fetch_assoc($results);
+            $_SESSION['user_id'] = $user['user_id'];
             header('location: index.php');
             exit();
         } else {
