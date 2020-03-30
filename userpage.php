@@ -1,5 +1,4 @@
 <?php
-include('server.php');
 $a = session_id();
 var_dump(session_id());
 if (empty($a)) {
