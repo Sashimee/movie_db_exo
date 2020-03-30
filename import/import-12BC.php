@@ -24,6 +24,7 @@
             echo 'movie not found' . '<br>';
         } else {
             echo $response['original_title'];
+            echo '<br>';
             // var_dump($response);
         }
     }
