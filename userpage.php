@@ -3,7 +3,7 @@ session_start();
 $user_check_query = "SELECT * FROM user WHERE user_id='$_SESSION[user_id]'";
 $result = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($result);
-var_dump('$user');
+var_dump($user);
 ?>
 <!DOCTYPE html>
 <html>
