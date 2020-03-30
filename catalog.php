@@ -12,62 +12,32 @@
 <body id="cat-bod">
     <div class="container">
         <div class="row">
-            <div class="col s1">
+            <div class="col s2">
                 <div class="card small">
                     TESTING TESTING ONE TWO REEEE
                 </div>
             </div>
-            <div class="col s1">
+            <div class="col s2">
                 <div class="card small">
                     TESTING TESTING ONE TWO REEEE
                 </div>
             </div>
-            <div class="col s1">
+            <div class="col s2">
                 <div class="card small">
                     TESTING TESTING ONE TWO REEEE
                 </div>
             </div>
-            <div class="col s1">
+            <div class="col s2">
                 <div class="card small">
                     TESTING TESTING ONE TWO REEEE
                 </div>
             </div>
-            <div class="col s1">
+            <div class="col s2">
                 <div class="card small">
                     TESTING TESTING ONE TWO REEEE
                 </div>
             </div>
-            <div class="col s1">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s1">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s1">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s1">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s1">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s1">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s1">
+            <div class="col s2">
                 <div class="card small">
                     TESTING TESTING ONE TWO REEEE
                 </div>
