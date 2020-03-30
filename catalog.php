@@ -22,7 +22,7 @@
                     <div class="col s3">
                         <div class="card">
                             <div class="card-image">
-                                <img src="' . (strlen($row['poster_url'])) === 33 ? ('https://dummyimage.com/500x750/000/fff') : ($row['poster_url']) . '">
+                                <img src="' . (strlen($row['poster_url']) === 33) ? 'https://dummyimage.com/500x750/000/fff' : $row['poster_url'] . '">
                                <span class="card-title">' . $row['title'] . '</span>
                             </div>        
                         </div>
