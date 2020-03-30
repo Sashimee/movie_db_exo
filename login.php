@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Registration system PHP and MySQL</title>
+    <title>Login</title>
 </head>
 
 <body>
