@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    for ($i = 0; $i < 5; $i++) {
+    for ($i = 0; $i < 25; $i++) {
         $curl = curl_init();
         $opts = [
             CURLOPT_URL => 'https://api.themoviedb.org/3/movie/' . $i . '?api_key=330e20146b752354b54e717c2df62353',
