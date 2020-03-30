@@ -19,12 +19,25 @@
             $res = mysqli_query($connect, $query);
             while ($row = mysqli_fetch_assoc($res)) {
                 $image = $row['poster_url'];
-                if (strlen($image) == 31)
+                $title = false;
+                if (strlen($image) == 31) {
                     $image = 'https://dummyimage.com/500x750/000/fff';
-                else
+                    $title = true;
+                } else {
                     $image = $row['poster_url'];
-
-                echo '
+                    $title = false;
+                }
+                if (!$title) {
+                    echo '
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="' . $image . '">
+                            </div>        
+                        </div>
+                    </div>';
+                } elseif ($title) {
+                    echo '
                     <div class="col s3">
                         <div class="card">
                             <div class="card-image">
@@ -33,6 +46,7 @@
                             </div>        
                         </div>
                     </div>';
+                }
             }
             ?>
 
