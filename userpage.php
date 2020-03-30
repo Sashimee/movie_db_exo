@@ -21,7 +21,7 @@ var_dump($user);
 </head> 
 
 <body>
-    <form method="post" action="register.php">
+    <form class="formForm" method="post" action="register.php">
         <?php include('errors.php'); ?>
         <div class="input-group">
             <label>Username</label>
