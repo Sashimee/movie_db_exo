@@ -77,3 +77,34 @@ form,
   border: 1px solid #3c763d;
   margin-bottom: 20px;
 }
+
+/* Navbar */
+.nav-bar {
+  font-size: 120%;
+  padding: 1rem 0;
+  background-color: black;
+}
+.nav-bar,a {
+  color: white;
+  text-decoration: none;    
+}
+.navbarSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+.navbarSection>ul {
+  display: inline-flex;  
+}
+.navbarSection>ul>li {
+  list-style: none;
+  margin: auto 0.8rem;  
+  border: solid 2px grey;  
+  border-radius: 5px;
+  padding: 0.4rem;
+  transition: 0.2s ease;
+}
+.navbarSection>ul>li:hover{
+  transition: 0.2s ease;
+  transform: scale(1.3, 1.3);
+}
