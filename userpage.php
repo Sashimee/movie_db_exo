@@ -6,7 +6,7 @@ if (!empty($a)) {
     $user_data = $get_user->fetch_assoc();
     var_dump($user_data);
 } else {
-    header("Location: index.php");
+    var_dump(session_id());
 } ?>
 <!DOCTYPE html>
 <html>
