@@ -1,9 +1,9 @@
 <?php
 include('server.php');
-if (isset($_GET['user'])) {
-    $user = $_GET['user'];
-    $get_user = $mysqli->query("SELECT * FROM users WHERE username = '$user'");
+if (isset($_GET['session_id'])) {
+    $get_user = $mysqli->query('SELECT * FROM user WHERE session_id ='  . session_id());
     $user_data = $get_user->fetch_assoc();
+    var_dump($user_data);
 } else {
     header("Location: index.php");
 } ?>
