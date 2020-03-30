@@ -3,8 +3,7 @@
 <html>
 
 <head>
-    <title>Registration system PHP and MySQL</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Login</title>
 </head>
 
 <body>
