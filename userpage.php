@@ -43,10 +43,10 @@ var_dump($user);
         <?php
         $username = $user['username'];
         $email = $user['email'];
-        $password_1 = $user['password_1'];
-        $password_2 = $user['password_2'];
+        $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
+        $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
         if (!empty($user['password_1'])) {
-            $password = md5($password_1);
+            $password = md5($user['password']);
             $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username', password = '$password' WHERE user_id = '$user_id'");
         } else {
             $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username' WHERE user_id = '$user_id'");
