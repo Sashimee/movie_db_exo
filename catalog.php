@@ -12,36 +12,25 @@
 <body id="cat-bod">
     <div class="container">
         <div class="row">
-            <div class="col s3">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s2">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s2">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s2">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s2">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
-            <div class="col s2">
-                <div class="card small">
-                    TESTING TESTING ONE TWO REEEE
-                </div>
-            </div>
+            <?php
+            require_once 'database.php';
+            $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+            $query = 'SELECT * FROM movie';
+            $res = mysqli_query($connect, $query);
+            while ($row = mysqli_fetch_assoc($res)) {
+                echo '
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="' . $row['poster_url'] . '">
+                               <span class="card-title">' . $row['title'] . '</span>
+                            </div>        
+                        </div>
+                    </div>';
+            }
+            ?>
+
+
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
