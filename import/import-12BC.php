@@ -9,19 +9,17 @@
 
 <body>
     <?php
+    // for ($i = 0; $i < 100; $i++) {
+    //     # code...
+    // }
     $curl = curl_init();
-
     $opts = [
-        CURLOPT_URL => 'https://api.themoviedb.org/3/movie/2?api_key=330e20146b752354b54e717c2df62353',
+        CURLOPT_URL => 'https://api.themoviedb.org/3/movie/1?api_key=330e20146b752354b54e717c2df62353',
         CURLOPT_RETURNTRANSFER => true,
     ];
-
     curl_setopt_array($curl, $opts);
-
     $response = curl_exec($curl);
     curl_close($curl);
-
-
     var_dump($response);
     ?>
 </body>
