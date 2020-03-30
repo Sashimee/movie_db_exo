@@ -9,12 +9,12 @@
 <body>
 
 <nav id="nab-bar">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper grey darken-4">
+      <a href="index.php" class="brand-logo">Anything Movie</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="sass.html">Genre</a></li>
+        <li><a href="catalog.php">Movies</a></li>
+        <li><a href="login.php">LogIn</a></li>
       </ul>
     </div>
   </nav>
