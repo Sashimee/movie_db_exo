@@ -4,9 +4,7 @@ session_start();
 $user_id = $_SESSION['user_id'];
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 $user_check_query = "SELECT * FROM user WHERE user_id= $user_id";
-var_dump($user_check_query);
 $result = mysqli_query($db, $user_check_query);
-var_dump($result);
 $user = mysqli_fetch_assoc($result);
 var_dump($user);
 ?>
@@ -21,7 +19,7 @@ var_dump($user);
 </head> 
 
 <body>
-    <form method="post" action="register.php">
+    <form method="post" action="userpage.php">
         <?php include('errors.php'); ?>
         <div class="input-group">
             <label>Username</label>
@@ -43,21 +41,16 @@ var_dump($user);
             <button type="submit" class="btn" name="reg_user">Update</button>
         </div> 
         <?php
-        if (isset($_POST['update_profile'])) {
-
-            $user = $_POST['username'];
-            $email = $_POST['fullname'];
-            $password_1 = $_POST['password_1'];
-            $password_2 = $_POST['password_2'];
-            $userdata =
-                $update_profile = $mysqli->query("UPDATE user SET email = '$email',
-                      password = '$password' WHERE user_id = '$a'");
-            if ($update_profile) {
-                header("Location: profile.php?user=$user");
-            } else {
-                echo $mysqli->error;
-            }
-        };
+        $username = $user['username'];
+        $email = $user['email'];
+        $password_1 = $user['password_1'];
+        $password_2 = $user['password_2'];
+        if (!empty($user['password_1'])) {
+            $password = md5($password_1);
+            $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username', password = '$password' WHERE user_id = '$user_id'");
+        } else {
+            $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username' WHERE user_id = '$user_id'");
+        }
         ?>
 </body>
 
