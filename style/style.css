@@ -28,8 +28,8 @@ body {
   border-radius: 10px 10px 0px 0px;
   padding: 20px;
 }
-/*
-form,
+
+.loginForm,
 .content {
   width: 30%;
   margin: 0px auto;
@@ -37,7 +37,7 @@ form,
   border: 1px solid #b0c4de;
   background: white;
   border-radius: 0px 0px 10px 10px;
-}*/
+}
 .input-group {
   margin: 10px 0px 10px 0px;
 }
