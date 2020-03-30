@@ -41,7 +41,7 @@ var_dump($user);
             <button type="submit" class="btn" name="reg_user">Update</button>
         </div> 
         <?php
-        if (isset($_POST)) {
+        if (isset($_POST['reg_user'])) {
             $username = $user['username'];
             $email = $user['email'];
             if (!empty($user['password_1'])) {
