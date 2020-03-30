@@ -16,8 +16,9 @@
             CURLOPT_RETURNTRANSFER => true,
         ];
         curl_setopt_array($curl, $opts);
-        $response = curl_exec($curl);
+        $response_json = curl_exec($curl);
         curl_close($curl);
+        $response = json_decode($response_json, true);
         if (isset($response['status_code'])) {
             echo $response['status_code'];
             echo 'movie not found';
