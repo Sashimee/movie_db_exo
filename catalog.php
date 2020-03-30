@@ -33,7 +33,6 @@
                         <div class="card">
                             <div class="card-image">
                                 <img src="' . $image . '">
-                               <span class="card-title">' . $row['title'] . '</span>
                             </div>        
                         </div>
                     </div>';
@@ -43,6 +42,7 @@
                         <div class="card">
                             <div class="card-image">
                                 <img src="' . $image . '">
+                               <span class="card-title">' . $row['title'] . '</span>
                             </div>        
                         </div>
                     </div>';
