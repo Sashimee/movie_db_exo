@@ -1,4 +1,5 @@
 <?php
+session_start();
 $a = session_id();
 var_dump($a);
 if (!empty($a)) {
