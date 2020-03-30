@@ -12,7 +12,7 @@
 <nav id="nab-bar">
     <div class="nav-wrapper grey darken-4">
       <a href="index.php" class="brand-logo">Anything Movie</a>
-      <div class="center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></div>
+      <span class="center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></span>
       <ul id="nav-mobile" class="right hide-on-med-and-down">        
         <li><a href="sass.html">Genre</a></li>
         <li><a href="catalog.php">Movies</a></li>
