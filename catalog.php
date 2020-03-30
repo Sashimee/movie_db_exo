@@ -20,7 +20,7 @@
             while ($row = mysqli_fetch_assoc($res)) {
                 echo '
                     <div class="col s3">
-                        <div class="card small">
+                        <div class="card">
                             <div class="card-image">
                                 <img src="' . $row['poster_url'] . '">
                                <span class="card-title">' . $row['title'] . '</span>
