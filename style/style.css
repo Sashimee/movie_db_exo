@@ -112,3 +112,6 @@ a {
 .navbarSection>ul>li>a {
   text-decoration: none;
 }
+.navbarSection>ul>li>a:hover {
+  text-decoration: none;
+}
