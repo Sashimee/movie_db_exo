@@ -41,15 +41,17 @@ var_dump($user);
             <button type="submit" class="btn" name="reg_user">Update</button>
         </div> 
         <?php
-        $username = $user['username'];
-        $email = $user['email'];
-        if (!empty($user['password_1'])) {
-            $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-            $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-            $password = md5($user['password']);
-            $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username', password = '$password' WHERE user_id = '$user_id'");
-        } else {
-            $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username' WHERE user_id = '$user_id'");
+        if (isset($_POST)) {
+            $username = $user['username'];
+            $email = $user['email'];
+            if (!empty($user['password_1'])) {
+                $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
+                $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+                $password = md5($user['password']);
+                $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username', password = '$password' WHERE user_id = '$user_id'");
+            } else {
+                $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username' WHERE user_id = '$user_id'");
+            }
         }
         ?>
 </body>
