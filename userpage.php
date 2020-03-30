@@ -26,7 +26,7 @@
             <input type="password" name="password_2">
         </div>
         <div class="input-group">
-            <button type="submit" class="btn" name="reg_user">Update</button>
+            <button type="submit" class="btn" name="update_user">Update</button>
         </div>
     </form>
 </body>
