@@ -19,7 +19,7 @@
             $res = mysqli_query($connect, $query);
             while ($row = mysqli_fetch_assoc($res)) {
                 $image = $row['poster_url'];
-                if (strlen($image) == 33)
+                if (strlen($image) == 31)
                     $image = 'https://dummyimage.com/500x750/000/fff';
                 else
                     $image = $row['poster_url'];
