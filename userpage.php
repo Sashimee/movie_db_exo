@@ -48,8 +48,10 @@ var_dump($user);
                 $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
                 $password = md5($user['password']);
                 $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username', password = '$password' WHERE user_id = '$user_id'");
+                var_dump('$update_profile');
             } else {
                 $update_profile = $mysqli->query("UPDATE user SET email = '$email', username = '$username' WHERE user_id = '$user_id'");
+                var_dump('$update_profile');
             }
         }
         ?>
