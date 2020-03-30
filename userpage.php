@@ -1,5 +1,6 @@
 <?php
 include('server.php');
+var_dump(session_id());
 if (isset($_GET['session_id'])) {
     $get_user = $mysqli->query('SELECT * FROM user WHERE session_id ='  . session_id());
     $user_data = $get_user->fetch_assoc();
