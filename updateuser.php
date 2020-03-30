@@ -1,9 +1,9 @@
     <?php
     if (isset($_POST['update_user'])) {
         $username = mysqli_real_escape_string($db, $_SESSION['username']);
-        $email = mysqli_real_escape_string($db, $_POST['email']);
-        $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-        $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+        $email = mysqli_real_escape_string($db, $_SESSION['email']);
+        $password_1 = mysqli_real_escape_string($db, $_SESSION['password_1']);
+        $password_2 = mysqli_real_escape_string($db, $_SESSION['password_2']);
 
         if (empty($email)) {
             array_push($errors, "Email is required");
