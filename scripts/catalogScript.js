@@ -1,3 +1,4 @@
 $(".col").mouseenter(function(e) {
-  $(".info").show();
+  const infoCard = $(this).find(".info");
+  infoCard.show();
 });
