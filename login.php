@@ -3,7 +3,10 @@
 <html>
 
 <head>
-    <title>Login</title>
+    <<<<<<< HEAD <title>Login</title>
+        =======
+        <title>Registration system PHP and MySQL</title>
+        >>>>>>> 952cabc246977bcf3818a252de57a6c64e59b0b1
 </head>
 
 <body>
