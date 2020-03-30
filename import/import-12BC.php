@@ -20,6 +20,7 @@
         curl_close($curl);
         if ($response['status_code' == '34']) {
             echo 'movie not found';
+            var_dump($response);
         } else {
             var_dump($response);
         }
