@@ -21,7 +21,7 @@ include_once('DataPlaylist.php');
         <div class="row">
             <?php
 
-            require "database.php";
+            include_once("database.php");
 
             if (!empty($_GET['searchName'])) {
                 $searchName = $_GET['searchName'];
