@@ -42,10 +42,10 @@
                 <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" placeholder="Release date ... YYYY/MM/DD">
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" placeholder="Rating ...">
                 <textarea class="form-control" name="description" id="description"><?php echo $movieDesc ?></textarea>
-                <button class="btn" type="submit" name="save">Save</button>
-                <button class="btn" type="submit" name="new">New</button>
+                <button class="btn-alx" type="submit" name="save">Save</button>
+                <button class="btn-alx" type="submit" name="new">New</button>
             </form>
-            <button class="btn" id="edit">Edit</button>
+            <button class="btn-alx" id="edit">Edit</button>
         </div>
     <?php
     }
@@ -102,10 +102,10 @@
                 <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
                 <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
-                <button class="btn" type="submit" name="save">Save</button>
-                <button class="btn" type="submit" name="new">New</button>
+                <button class="btn-alx" type="submit" name="save">Save</button>
+                <button class="btn-alx" type="submit" name="new">New</button>
             </form>
-            <button class="btn" id="edit">Edit</button>
+            <button class="btn-alx" id="edit">Edit</button>
         </div>
     <?php
     } else {
