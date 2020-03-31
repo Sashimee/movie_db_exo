@@ -119,7 +119,7 @@ a {
 .info {
   display: none;
   background-color: #1e2129;
-  width: 190%;
+  width: 209%;
   position: relative; /*Code specifically for bringing mini-info to front*/
   z-index: 2;
 }
