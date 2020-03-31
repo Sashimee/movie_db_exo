@@ -114,14 +114,13 @@ a {
 
 .col {
   position: relative;
-  z-index: 1;
 }
 
 .info {
   display: none;
   background-color: #1e2129;
-  width: 200%;
-  position: absolute; /*Code specifically for bringing mini-info to front*/
+  width: 209%;
+  position: relative; /*Code specifically for bringing mini-info to front*/
   z-index: 2;
 }
 
