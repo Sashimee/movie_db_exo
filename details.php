@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body id="cat-bod">
+<body>
+    <!-- <body> //id="cat-bod"> -->
     <?php
     // session_start();
     // NAVBAR
@@ -53,8 +54,8 @@
     <?php
     }
     if (isset($_POST['save'])) {
-        echo $_GET['movie_id'];
-        var_dump($_GET);
+        // echo $_GET['movie_id'];
+        // var_dump($_GET);
         if (isset($_GET['movie_id'])) {
             $movieId = $_GET['movie_id'];
             $movieTitle = $_POST['title'];
@@ -72,9 +73,9 @@
             $moviePoster = $_POST['posterUrl'];
             $movieReleaseDate = $_POST['release-date'];
             $movieRating = $_POST['rating'];
-            //$query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
-            //$query = "INSERT INTO movie(title, poster_url, synopsis, category, release_date, rating) VALUES ('" . $response['original_title'] . "','" . "https://image.tmdb.org/t/p/w500" .  $response['poster_path'] . "','" . $response['overview'] . "','" . $response['genres'][0]['name'] . "','" . $response['release_date'] . "','" . $response['vote_average'] . "')";
-            //mysqli_query($connect, $query);
+            $query = "INSERT INTO movie(title, poster_url, synopsis, category, release_date, rating) VALUES ('" . $movieTitle . "','" . $moviePoster . "','" . $movieDesc . "','" . $movieCategory . "','" . $movieReleaseDate . "','" . $movieRating . "')";
+            $response = mysqli_query($connect, $query);
+            var_dump($response);
         }
     }
     //Populate if movie ID is given
