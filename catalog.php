@@ -10,6 +10,9 @@
 </head>
 <?php require_once 'nav-bar.php';
 include_once('DataPlaylist.php');
+include_once('database.php');
+$db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+$user_id = $_SESSION['user_id'];
 session_start(); ?>
 
 <body id="cat-bod">
