@@ -50,9 +50,9 @@ include_once('DataPlaylist.php'); ?>
                     <div class="col s3">
                         <div class="card">
                         <div class="playlistForm">
-                        <form method="post">
+                        <form method="post" onsubmit="return false">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="button" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
                         </form>
                         </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
@@ -76,9 +76,9 @@ include_once('DataPlaylist.php'); ?>
                     <div class="col s3">
                         <div class="card">
                         <div class="playlistForm">
-                        <form method="post">
+                        <form method="post" onsubmit="return false">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="button" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
                         </form>
                         </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
