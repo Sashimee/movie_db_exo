@@ -1,8 +1,6 @@
 <?php
 //PLAYLIST SECTION
-$movieId = $_POST['movieIdHex'];
 include_once('database.php');
-include_once('playlist.php');
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 
 //UserPlaylistRecover
@@ -12,6 +10,7 @@ $playlist = mysqli_fetch_assoc($result);
 
 //ADD Movie to Playlist
 if (isset($_POST['addMovPlaylist'])) {
+    $movieId = $_POST['movieIdHex'];
     $addMovPlaylist = "INSERT INTO playlist (user_id, movie_id) VALUES ($user_id, $movieId)";
     var_dump($addMovPlaylist);
     mysqli_query($db, $addMovPlaylist);
@@ -19,6 +18,7 @@ if (isset($_POST['addMovPlaylist'])) {
 
 //REMOVE from playlist
 if (isset($_POST['delMovPlaylist'])) {
+    $movieId = $_POST['movieIdHex'];
     $delMovPlaylist = "DELETE FROM playlist WHERE user_id= $user_id AND movie_id= $movieId";
     var_dump($delMovPlaylist);
     mysqli_query($db, $delMovPlaylist);
