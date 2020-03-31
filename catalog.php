@@ -12,9 +12,25 @@
 <body id="cat-bod">
     <div class="container">
         <div class="row">
+            <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Release</a>
+            <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <?php
+                    $i = 0;
+                    require_once 'database.php';
+                    $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+                    $catQuery = 'SELECT DISTINCT category FROM movie';
+                    $catRes = mysqli_query($connect, $catQuery);
+                    while ($row = mysqli_fetch_assoc($catRes)) {
+                        $i++;
+                        echo '<option value="' . $i . '">' . $row['category'] . '</option>';
+                    }
+                    ?>
+                </select>
+                <label>Categories</label>
+            </div>
             <?php
-            require_once 'database.php';
-            $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
             $res = mysqli_query($connect, $query);
             while ($row = mysqli_fetch_assoc($res)) {
@@ -70,10 +86,9 @@
                     </div>';
                 }
             }
-            var_dump($storageArr);
+            mysqli_close($connect);
             ?>
         </div>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

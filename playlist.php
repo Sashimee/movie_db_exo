@@ -16,13 +16,13 @@
         <div class="row">
             <?php
             require_once 'database.php';
+            include_once('DataPlaylist.php');
             $user_id = $_SESSION['user_id'];
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $user_playlist = "SELECT * FROM movie INNER JOIN playlist ON movie.movie_id = playlist.movie_id";
             $res = mysqli_query($connect, $user_playlist);
             $storageArr = [];
             while ($row = mysqli_fetch_assoc($res)) {
-
                 $image = $row['poster_url'];
                 $title = false;
                 if (strlen($image) == 31) {
@@ -36,15 +36,16 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
+                        <form class="" method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
+                        <button type="submit" class="" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="" name="delMovPlaylist">Remove</button>
+                        </form>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
                                 </div>
                                 </a>
-                                <form class="formForm" method="post">
-                                <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
-                                <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
-                                </form>
                         </div>
                         <div class="card info">
                             <div class="card-content">
@@ -60,17 +61,17 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
+                        <form class="" method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
+                        <button type="submit" class="" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="" name="delMovPlaylist">Remove</button>
+                        </form>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
                                     <span class="card-title">' . $row['title'] . '</span>
                                     </div> 
-                                    </a>       
-                                    <form class="" method="post">
-                                    <button type="submit" class="" name="addMovPlaylist">Add Playlist</button>
-                                    <button type="submit" class="" name="delMovPlaylist">Remove Playlist</button>
-                                </form>
-                                    </div>
+                            </a>
                                     <div class="card info">
                                     <div class="card-content">
                                     <p class="info-mov-title">' . $row['title'] . '</p>
@@ -83,29 +84,6 @@
                     </div>';
                 }
                 array_push($storageArr, $row['title'], $row['rating'], $row['release_date'], $row['category'], $row['synopsis']);
-                //PLAYLIST SECTION
-                $movieId = $row['movie_id'];
-                include_once('database.php');
-                $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-
-                //UserPlaylistRecover
-                $user_playlist_query = "SELECT * FROM playlist WHERE user_id= $user_id";
-                $result = mysqli_query($db, $user_playlist_query);
-                $playlist = mysqli_fetch_assoc($result);
-
-                //ADD Movie to Playlist
-                if (isset($_POST['addMovPlaylist'])) {
-                    $addMovPlaylist = "INSERT INTO playlist (user_id, movie_id) VALUES ($user_id, $movieId)";
-                    var_dump($addMovPlaylist);
-                    mysqli_query($db, $addMovPlaylist);
-                }
-
-                //REMOVE from playlist
-                if (isset($_POST['delMovPlaylist'])) {
-                    $delMovPlaylist = "DELETE FROM playlist WHERE user_id= $user_id AND movie_id= $movieId";
-                    var_dump($delMovPlaylist);
-                    mysqli_query($db, $delMovPlaylist);
-                }
             }
             ?>
         </div>

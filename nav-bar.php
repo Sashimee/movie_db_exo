@@ -1,22 +1,16 @@
-<?php
-/*require "database.php";*/
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <title>Nav bard</title>
 </head>
 
 <body>
 
-
+  <!-- bootstrap
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <span class="navbar-brand">Anything The Movies</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,12 +37,12 @@
       </form>
     </div>
   </nav>
+-->
 
 
 
 
-
-  <!--
+  <!-- by hand, requires uncommenting style.css
 <nav class="nav-bar">
 <div class="navbarSection" >
       <a href="index.php">
@@ -64,21 +58,28 @@
 
 </nav>
 -->
-  <!--
-<nav id="nab-bar">
+
+  <nav>
     <div class="nav-wrapper grey darken-4">
-      <a href="index.php" class="brand-logo left">Anything Movie</a>
-      <span class="center">Welcome </span>
-      <ul id="nav-mobile" class="right hide-on-med-and-down ">        
-        <li><a href="sass.html">Genre</a></li>
+      <span class="brand-logo">Anything The Movies</span>
+      <a href="userpage.php" class="brand-logo center">Welcome </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="userpage.php">User</a></li>
         <li><a href="catalog.php">Movies</a></li>
-        <li><a href="index.php?logout='1'">LogOut</a></li>
+        <li><a href="index.php?logout='1'">Log Out</a></li>
+        <div class="input-field inline">
+
+          <input id="search_inline" type="search" name="searchName" class="validate">
+          <label for="search_inline">Search</label>
+
+        </div>
       </ul>
     </div>
   </nav>
--->
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>
