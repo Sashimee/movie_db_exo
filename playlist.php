@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+include('DataPlaylist.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,6 +40,10 @@
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
                                 </div>
+                                <form class="formForm" method="post">
+                                <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
+                                <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
+                                </form>
                             </a>
                         </div>
                         <div class="card info">
@@ -47,10 +53,6 @@
                                 <p>' . $row['release_date'] . '</p>
                                 <p>' . $row['category'] . '</p>
                                 <p>' . 'Synopsis: '  . $row['synopsis'] . '</p>
-                                <form class="" method="post">
-                                <button type="submit" class="" name="addMovPlaylist">Add to Playlist</button>
-                                <button type="submit" class="" name="delMovPlaylist">Remove from Playlist</button>
-                                </form>
                             </div>
                         </div>
                     </div>';
