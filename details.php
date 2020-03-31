@@ -11,7 +11,7 @@
 
 <body id="cat-bod">
     <?php
-    session_start();
+    // session_start();
     // NAVBAR
     include_once 'nav-bar.php';
     // DB Info + Connection
@@ -44,6 +44,7 @@
             <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
             <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating . "/10" ?>" readonly>
             <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
+            <button type="submit" name="save"></button>
         </form>
         <button id="edit">Edit</button>
         <form class="" method="post">
