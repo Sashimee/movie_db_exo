@@ -6,7 +6,6 @@ $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 $user_check_query = "SELECT * FROM user WHERE user_id= $user_id";
 $result = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($result);
-var_dump($user);
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,17 +46,14 @@ var_dump($user);
                 $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
                 $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
                 $password = md5($user['password']);
-                $update_query = "UPDATE user SET email = '$email', username = '$username', password = '$password' WHERE user_id = '$user_id'";
-                mysqli_query($db, $update_query);
-
-                var_dump('$update_profile');
+                $update_query1 = "UPDATE user SET email = '$email', username = '$username', password = '$password' WHERE user_id = '$user_id'";
+                mysqli_query($db, $update_query1);
+                var_dump($update_query1);
             } else {
-                $update_query = "UPDATE user SET email = '$email', username = '$username' WHERE user_id = '$user_id'";
-                mysqli_query($db, $update_query);
-                var_dump('$update_profile');
+                $update_query2 = "UPDATE user SET email = '$email', username = '$username' WHERE user_id = '$user_id'";
+                mysqli_query($db, $update_query2);
+                var_dump($update_query2);
             }
-            echo "Info Updated";
-            header('location: index.php');
         }
         ?>
 </body>
