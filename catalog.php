@@ -18,7 +18,7 @@ include_once('DataPlaylist.php'); ?>
             <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Release</a>
             <div class="input-field col s12">
                 <select class="browser-default">
-                    <option value="0" disabled selected>Choose your option</option>
+                    <option value="0" disabled selected>Choose your category</option>
                     <?php
                     $i = 0;
                     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
@@ -30,7 +30,6 @@ include_once('DataPlaylist.php'); ?>
                     }
                     ?>
                 </select>
-                <label>Materialize Select</label>
             </div>
             <?php
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
