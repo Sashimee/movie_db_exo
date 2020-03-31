@@ -40,7 +40,7 @@
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
                 <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
                 <button type="submit" name="save">Save</button>
-                <button type="submit" id="new">New</button>
+                <button type="submit" name="new">New</button>
             </form>
             <button id="edit">Edit</button>
             <form class="" method="post">
@@ -87,7 +87,7 @@
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
                 <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
                 <button type="submit" name="save">Save</button>
-                <button type="submit" id="new">New</button>
+                <button type="submit" name="new">New</button>
             </form>
             <button id="edit">Edit</button>
             <form class="" method="post">
