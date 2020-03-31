@@ -36,10 +36,10 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
-                        <form class="formForm" method="post">
+                        <form class="" method="post">
                         <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="btn" name="addMovPlaylist">Add</button>
-                        <button type="submit" class="btn" name="delMovPlaylist">Remove</button>
+                        <button type="submit" class="" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="" name="delMovPlaylist">Remove</button>
                         </form>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
