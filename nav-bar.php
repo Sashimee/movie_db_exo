@@ -14,7 +14,7 @@
   <nav>
     <div class="nav-wrapper grey darken-4">
       <span class="brand-logo">Anything The Movies</span>
-      <a href="userpage.php" class="brand-logo center">Welcome </a>
+      <a href="userpage.php" class="brand-logo center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="userpage.php">User</a></li>
         <li><a href="catalog.php">Movies</a></li>
