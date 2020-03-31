@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Da Cat</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <?php require_once 'nav-bar.php';
@@ -18,10 +19,9 @@ include_once('DataPlaylist.php'); ?>
             <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Release</a>
             <div class="input-field col s12">
                 <select>
-                    <option value="" disabled selected>Choose your option</option>
+                    <option value="0" disabled selected>Choose your option</option>
                     <?php
                     $i = 0;
-                    require_once 'database.php';
                     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
                     $catQuery = 'SELECT DISTINCT category FROM movie';
                     $catRes = mysqli_query($connect, $catQuery);
