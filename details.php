@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body id="cat-bod">
     <?php
     // NAVBAR
-    // include_once("nav-bar.php");
+    include_once("nav-bar.php");
     // DB Info + Connection
     require_once 'database.php';
     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
