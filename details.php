@@ -20,6 +20,7 @@
     // Blank all the fields
     // Save the new info if edited
     if (isset($_POST['new'])) {
+        unset($_GET['movie_id']);
         $movieId = '';
         $movieTitle = '';
         $movieCategory = '';
