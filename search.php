@@ -13,7 +13,7 @@ session_start();
 </head>
 <?php require "nav-bar.php"; ?>
 
-<body id="cat-bod">
+<body id="cat-bod" style="background-color: rgb(30, 33, 41)">
     <div class="container">
         <div class="row">
             <?php
