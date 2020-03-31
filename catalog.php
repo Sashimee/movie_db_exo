@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
+<?php require_once 'nav-bar.php'; ?>
 
 <body id="cat-bod">
     <div class="container">
@@ -28,7 +29,7 @@
                     }
                     ?>
                 </select>
-                <label>Categories</label>
+                <label>Materialize Select</label>
             </div>
             <?php
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
@@ -47,6 +48,13 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
+                        <div class="playlistForm">
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
+                        </form>
+                        </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
@@ -67,6 +75,13 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
+                        <div class="playlistForm">
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
+                        </form>
+                        </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">

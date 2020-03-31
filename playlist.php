@@ -36,11 +36,13 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
-                        <form class="" method="post">
+                        <div class="playlistForm">
+                        <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="" name="addMovPlaylist">Add</button>
-                        <button type="submit" class="" name="delMovPlaylist">Remove</button>
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
+                        </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
@@ -61,11 +63,13 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
-                        <form class="" method="post">
+                        <div class="playlistForm">
+                        <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="" name="addMovPlaylist">Add</button>
-                        <button type="submit" class="" name="delMovPlaylist">Remove</button>
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
+                        </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
