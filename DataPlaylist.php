@@ -2,6 +2,8 @@
 //PLAYLIST SECTION
 $user_id = $_SESSION['user_id'];
 include_once('database.php');
+include_once('details.php');
+$movieId = $_GET['movie_id'];
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 
 //UserPlaylistRecover
