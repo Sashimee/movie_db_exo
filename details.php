@@ -57,7 +57,7 @@
                 <button type="submit" name="save">Sav-E</button>
             </form>
             <button id="edit">Edit</button>
-            <button id="new">Edit</button>
+            <button id="new">New</button>
             <form class="" method="post">
                 <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
                 <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
