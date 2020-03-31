@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
+<?php require_once 'nav-bar.php'; ?>
 
 <body id="cat-bod">
     <div class="container">
@@ -17,7 +18,6 @@
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
             $res = mysqli_query($connect, $query);
-            $storageArr = [];
             while ($row = mysqli_fetch_assoc($res)) {
                 $image = $row['poster_url'];
                 $title = false;
@@ -70,13 +70,6 @@
                         </div>
                     </div>';
                 }
-                array_push($storageArr, array(
-                    'title' => $row['title'],
-                    'rating' => $row['rating'],
-                    'release' => $row['release_date'],
-                    'cat' => $row['category'],
-                    'synopsis' => $row['synopsis']
-                ));
             }
             var_dump($storageArr);
             ?>

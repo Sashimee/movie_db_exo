@@ -53,15 +53,28 @@
     <?php
     }
     if (isset($_POST['save'])) {
-        $movieId = $_GET['movie_id'];
-        $movieTitle = $_POST['title'];
-        $movieCategory = $_POST['category'];
-        $movieDesc = $_POST['description'];
-        $moviePoster = $_POST['posterUrl'];
-        $movieReleaseDate = $_POST['release-date'];
-        $movieRating = $_POST['rating'];
-        $query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
-        mysqli_query($connect, $query);
+        echo $_GET['movie_id'];
+        if (isset($_GET['movie_id'])) {
+            $movieId = $_GET['movie_id'];
+            $movieTitle = $_POST['title'];
+            $movieCategory = $_POST['category'];
+            $movieDesc = $_POST['description'];
+            $moviePoster = $_POST['posterUrl'];
+            $movieReleaseDate = $_POST['release-date'];
+            $movieRating = $_POST['rating'];
+            $query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
+            mysqli_query($connect, $query);
+        } else {
+            $movieTitle = $_POST['title'];
+            $movieCategory = $_POST['category'];
+            $movieDesc = $_POST['description'];
+            $moviePoster = $_POST['posterUrl'];
+            $movieReleaseDate = $_POST['release-date'];
+            $movieRating = $_POST['rating'];
+            //$query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
+            //$query = "INSERT INTO movie(title, poster_url, synopsis, category, release_date, rating) VALUES ('" . $response['original_title'] . "','" . "https://image.tmdb.org/t/p/w500" .  $response['poster_path'] . "','" . $response['overview'] . "','" . $response['genres'][0]['name'] . "','" . $response['release_date'] . "','" . $response['vote_average'] . "')";
+            //mysqli_query($connect, $query);
+        }
     }
     //Populate if movie ID is given
     if (isset($_GET['movie_id'])) {
