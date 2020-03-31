@@ -119,6 +119,9 @@ a {
 .info {
   display: none;
   background-color: #1e2129;
-  color: whitesmoke;
   height: 236px;
+}
+
+.info p {
+  color: whitesmoke;
 }
