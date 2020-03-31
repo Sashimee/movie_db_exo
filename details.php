@@ -46,11 +46,6 @@
                 <button class="btn" type="submit" name="new">New</button>
             </form>
             <button class="btn" id="edit">Edit</button>
-            <form class="" method="post">
-                <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
-                <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
-            </form>
-
         </div>
     <?php
     }
@@ -111,11 +106,6 @@
                 <button class="btn" type="submit" name="new">New</button>
             </form>
             <button class="btn" id="edit">Edit</button>
-            <form class="" method="post">
-                <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
-                <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
-            </form>
-
         </div>
     <?php
     } else {

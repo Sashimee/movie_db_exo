@@ -5,15 +5,17 @@ $username = "";
 $email    = "";
 $errors = array();
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-
+$sessionId = session_id();
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
     // receive all input values from the form
+    session_start();
     $username = mysqli_real_escape_string($db, $_POST['username']);
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
     $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+    $user_id = $_SESSION['user_id'];
 
     if (empty($username)) {
         array_push($errors, "Username is required");
@@ -46,8 +48,6 @@ if (isset($_POST['reg_user'])) {
     // REGISTER
     if (count($errors) == 0) {
         $password = md5($password_1); //encrypt the password before saving in the database
-        $user_id = $_SESSION['user_id'];
-
         $query = "INSERT INTO user (username, email, password, session_id) 
   			  VALUES('$username', '$email', '$password', '$sessionId')";
         mysqli_query($db, $query);

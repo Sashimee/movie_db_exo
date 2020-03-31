@@ -40,6 +40,9 @@
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        </form>
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
                         </div>
@@ -67,6 +70,9 @@
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        </form>
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
                         </div>
