@@ -35,11 +35,11 @@
                 <div class="text-center">
                     <img src="<?php echo $moviePoster ?>">
                 </div>
-                <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>">
-                <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>">
+                <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>" placeholder="Movie Title ...">
+                <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>" placeholder="Category ...">
                 <input type="text" class="form-control" name="posterUrl" id="posterUrl" value="<?php echo $moviePoster ?>">
-                <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>">
-                <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>">
+                <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" placeholder="Release date ... YYYY/MM/DD">
+                <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" placeholder="Rating ...">
                 <textarea class="form-control" name="description" id="description"><?php echo $movieDesc ?></textarea>
                 <button class="btn" type="submit" name="save">Save</button>
                 <button class="btn" type="submit" name="new">New</button>
