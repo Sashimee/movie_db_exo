@@ -54,6 +54,7 @@
     }
     if (isset($_POST['save'])) {
         echo $_GET['movie_id'];
+        var_dump($_GET);
         if (isset($_GET['movie_id'])) {
             $movieId = $_GET['movie_id'];
             $movieTitle = $_POST['title'];
