@@ -23,6 +23,10 @@
         $movie = mysqli_fetch_assoc($answer);
         $movieTitle = $movie['title'];
         $moviePoster = $movie['poster_url'];
+        $movieCategory = $movie['category'];
+        $movieDesc = $movie['synopsis'];
+        $movieReleaseDate = $movie['release_date'];
+        $movieRating = $movie['rating'];
         var_dump($movie);
         mysqli_close($connect);
     } else {
@@ -31,17 +35,11 @@
     ?>
 
     <div class="container">
-        <div class="card" style="width: 18rem;">
-            <img src="<?php echo $moviePoster ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text"><?php echo $movieTitle ?></p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
         <form action="details.php" method="post">
             <img src="<?php echo $moviePoster ?>">
             <input type="text" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
+            <input type="text" name="category" id="category" value="<?php echo $movieCategory ?>">
+            <textarea name="description" id="description" cols="30" rows="10" readonly><?php echo $movieDesc ?></textarea>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -50,3 +48,9 @@
 </body>
 
 </html>
+<!--
+TODO
+
+ADD BTN TO ADD OR REMOVE FROM PLAYLIST
+
+ -->
