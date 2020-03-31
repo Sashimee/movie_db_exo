@@ -1,5 +1,6 @@
 <?php
 include_once('database.php');
+include_once("nav-bar.php");
 $user_id = $_SESSION['user_id'];
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 $user_check_query = "SELECT * FROM user WHERE user_id= $user_id";
@@ -17,7 +18,6 @@ $user = mysqli_fetch_assoc($result);
 </head> 
 
 <body>
-    <?php include_once("nav-bar.php"); ?>
     <form class="formForm" method="post" action="userpage.php">
         <div class="input-group">
             <label>Username</label>
