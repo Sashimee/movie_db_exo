@@ -31,7 +31,7 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
-                            <a href="detail.php?movie_id=' . $row['movie_id'] . '">
+                            <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
                                 </div>
@@ -51,7 +51,7 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
-                            <a href="detail.php?movie_id=' . $row['movie_id'] . '">
+                            <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
                                     <span class="card-title">' . $row['title'] . '</span>
