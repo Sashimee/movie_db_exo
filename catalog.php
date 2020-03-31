@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <?php require_once 'nav-bar.php';
-session_start();
 include_once('DataPlaylist.php'); ?>
 
 <body id="cat-bod">
