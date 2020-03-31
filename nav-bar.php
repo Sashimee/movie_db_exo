@@ -10,16 +10,16 @@
 </head>
 
 <body>
-  <?php session_start() 
+  <?php session_start();
   if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
-}
-if (isset($_GET['logout'])) {
+  }
+  if (isset($_GET['logout'])) {
 
     unset($_SESSION['username']);
     header("location: login.php");
-}
+  }
   ?>
 
   <nav>
