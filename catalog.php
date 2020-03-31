@@ -31,9 +31,11 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
-                            <div class="card-image">
-                                <img class="poster hoverable" src="' . $image . '">
-                            </div>        
+                            <a href="detail.php?movie_id=' . $row['movie_id'] . '">
+                                <div class="card-image">
+                                    <img class="poster hoverable" src="' . $image . '">
+                                </div>
+                            </a>
                         </div>
                         <div class="card-content info">
                             <div class="">
@@ -49,10 +51,12 @@
                     echo '
                     <div class="col s3">
                         <div class="card">
-                            <div class="card-image">
-                                <img class="poster hoverable" src="' . $image . '">
-                                <span class="card-title">' . $row['title'] . '</span>
-                            </div>        
+                            <a href="detail.php?movie_id=' . $row['movie_id'] . '">
+                                <div class="card-image">
+                                    <img class="poster hoverable" src="' . $image . '">
+                                    <span class="card-title">' . $row['title'] . '</span>
+                                </div> 
+                            </a>       
                         </div>
                         <div class="card-content info">
                             <div class="">
