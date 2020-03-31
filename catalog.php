@@ -12,11 +12,7 @@
 <body id="cat-bod">
     <div class="container">
         <div class="row">
-            <span>
-                <p>Standard filter: Rating</p>
-                <p>Filters:</p>
-            </span>
-            <a class="waves-effect waves-light btn"><i class="material-icons left">arrow_drop_down</i>Release</a>
+            <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Release</a>
             <div class="input-field col s12">
                 <select>
                     <option value="" disabled selected>Choose your option</option>
