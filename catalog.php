@@ -100,6 +100,9 @@ include_once('DataPlaylist.php'); ?>
                 }
             }
             mysqli_close($connect);
+            if (isset($_POST)) {
+                var_dump($_POST);
+            }
             ?>
         </div>
     </div>

@@ -16,4 +16,10 @@ $(document).ready($("#catSel").on("change", clickFunction));
 
 function clickFunction() {
   console.log($(this).val());
+  const cat = $(this).val();
+  $.ajax({
+    type: "POST",
+    url: "catalog.php",
+    data: cat
+  });
 }
