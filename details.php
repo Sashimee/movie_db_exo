@@ -31,7 +31,7 @@
         $movieRating = '';
     ?>
         <div class="container">
-            <form action="details.php?movie_id=<?php echo $movieId ?>" method="post">
+            <form action="details.php" method="post">
                 <div class="text-center">
                     <img src="<?php echo $moviePoster ?>">
                 </div>
