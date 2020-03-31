@@ -37,9 +37,9 @@ require_once "database.php";
         </li>
       </ul>
       <span class="text-light" style="margin-right:2rem">Welcome <strong><?php echo $_SESSION['username']; ?></strong></span>
-      <form class="form-inline my-2 my-lg-0" method="get">
+      <form action="search.php" class="form-inline my-2 my-lg-0" method="get">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchName">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="window.location = 'search.php';">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
