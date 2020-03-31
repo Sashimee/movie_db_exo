@@ -7,6 +7,7 @@ $(".col").mouseleave(function(e) {
   infoCard.hide();
 });
 $("select").click(function() {
+  console.log("test");
   $("option").click(function(e) {
     console.log(this.val());
     console.log("ree");
