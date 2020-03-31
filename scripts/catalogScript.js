@@ -16,5 +16,5 @@ $(document).ready($("#catSel").on("change", clickFunction));
 
 function clickFunction() {
   console.log("ree");
-  console.log(this.val());
+  console.log($(this).val());
 }
