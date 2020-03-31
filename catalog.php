@@ -32,7 +32,7 @@
                     <div class="col s3">
                         <div class="card">
                             <div class="card-image">
-                                <img class="poster" src="' . $image . '">
+                                <img class="poster hoverable" src="' . $image . '">
                             </div>        
                         </div>
                         <div class="card info">
@@ -50,7 +50,7 @@
                     <div class="col s3">
                         <div class="card">
                             <div class="card-image">
-                                <img class="poster" src="' . $image . '">
+                                <img class="poster hoverable" src="' . $image . '">
                                 <span class="card-title">' . $row['title'] . '</span>
                             </div>        
                         </div>
