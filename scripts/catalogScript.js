@@ -9,3 +9,8 @@ $(".col").mouseleave(function(e) {
 $(document).ready(function() {
   $("select").formSelect();
 });
+$("select").click(function() {
+  $("option").click(function(e) {
+    console.log($(this).val);
+  });
+});
