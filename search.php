@@ -12,29 +12,30 @@ session_start();
     <title>Document</title>
 </head>
 
-<body>
+<body id="cat-bod">
+    <div class="container">
+        <div class="row">
+            <?php
+            require "nav-bar.php";
+            require "database.php";
 
-    <?php
-    require "nav-bar.php";
-    require "database.php";
-
-    if (!empty($_GET['searchName'])) {
-        $searchName = $_GET['searchName'];
-        $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-        $query = "SELECT * FROM movie WHERE title LIKE '%$searchName%'";
-        $res = mysqli_query($connect, $query);
-        while ($row = mysqli_fetch_assoc($res)) {
-            $image = $row['poster_url'];
-            $title = false;
-            if (strlen($image) == 31) {
-                $image = 'https://dummyimage.com/500x750/000/fff';
-                $title = true;
-            } else {
-                $image = $row['poster_url'];
-                $title = false;
-            }
-            if (!$title) {
-                echo '
+            if (!empty($_GET['searchName'])) {
+                $searchName = $_GET['searchName'];
+                $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+                $query = "SELECT * FROM movie WHERE title LIKE '%$searchName%'";
+                $res = mysqli_query($connect, $query);
+                while ($row = mysqli_fetch_assoc($res)) {
+                    $image = $row['poster_url'];
+                    $title = false;
+                    if (strlen($image) == 31) {
+                        $image = 'https://dummyimage.com/500x750/000/fff';
+                        $title = true;
+                    } else {
+                        $image = $row['poster_url'];
+                        $title = false;
+                    }
+                    if (!$title) {
+                        echo '
                 <div class="col s3">
                     <div class="card">
                         <a href="details.php?movie_id=' . $row['movie_id'] . '">
@@ -53,8 +54,8 @@ session_start();
                         </div>
                     </div>
                 </div>';
-            } elseif ($title) {
-                echo '
+                    } elseif ($title) {
+                        echo '
                 <div class="col s3">
                     <div class="card">
                         <a href="details.php?movie_id=' . $row['movie_id'] . '">
@@ -74,11 +75,14 @@ session_start();
                         </div>
                     </div>
                 </div>';
+                    }
+                }
             }
-        }
-    }
 
-    ?>
+            ?>
+        </div>
+
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
