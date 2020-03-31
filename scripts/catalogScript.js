@@ -7,5 +7,5 @@ $(".col").mouseleave(function(e) {
   infoCard.hide();
 });
 $(document).ready(function() {
-  $("select").material_select();
+  $("select").formSelect();
 });
