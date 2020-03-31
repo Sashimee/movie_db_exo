@@ -9,13 +9,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<?php
-require_once 'nav-bar.php';
-include_once('DataPlaylist.php');
-include_once('database.php');
-$db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-$user_id = $_SESSION['user_id'];
-session_start(); ?>
+<?php require_once 'nav-bar.php';
+session_start();
+include_once('DataPlaylist.php'); ?>
 
 <body id="cat-bod">
     <div class="container">
