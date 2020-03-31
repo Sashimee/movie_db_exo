@@ -35,7 +35,9 @@
 
     <div class="container">
         <form action="details.php" method="post">
-            <img src="<?php echo $moviePoster ?>">
+            <div class="text-center">
+                <img src="<?php echo $moviePoster ?>">
+            </div>
             <input type="text" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
             <input type="text" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
             <input type="text" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
