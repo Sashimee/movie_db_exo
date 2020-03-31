@@ -6,3 +6,6 @@ $(".col").mouseleave(function(e) {
   const infoCard = $(this).find(".info");
   infoCard.hide();
 });
+$(document).ready(function() {
+  $("select").material_select();
+});
