@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
+<?php require_once 'nav-bar.php'; ?>
 
 <body id="cat-bod">
     <div class="container">
         <div class="row">
             <?php
-            require_once 'nav-bar.php';
             require_once 'database.php';
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
