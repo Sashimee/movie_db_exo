@@ -42,10 +42,10 @@
                 <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" placeholder="Release date ... YYYY/MM/DD">
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" placeholder="Rating ...">
                 <textarea class="form-control" name="description" id="description"><?php echo $movieDesc ?></textarea>
+                <button class="btn" id="edit">Edit</button>
                 <button class="btn" type="submit" name="save">Save</button>
                 <button class="btn" type="submit" name="new">New</button>
             </form>
-            <button class="btn" id="edit">Edit</button>
             <form class="" method="post">
                 <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
                 <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
@@ -107,13 +107,9 @@
                 <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
                 <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
+                <button class="btn" id="edit">Edit</button>
                 <button class="btn" type="submit" name="save">Save</button>
                 <button class="btn" type="submit" name="new">New</button>
-            </form>
-            <button class="btn" id="edit">Edit</button>
-            <form class="" method="post">
-                <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
-                <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
             </form>
 
         </div>
