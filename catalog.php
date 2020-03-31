@@ -35,7 +35,7 @@
                                 <img class="poster hoverable" src="' . $image . '">
                             </div>        
                         </div>
-                        <div class="card-content info">
+                        <div class="card info">
                             <div class="card-content">
                                 <p>' . $row['title'] . '</p>
                                 <p>' . $row['rating'] . '/10' . '</p>
@@ -54,7 +54,7 @@
                                 <span class="card-title">' . $row['title'] . '</span>
                             </div>        
                         </div>
-                        <div class="card-content info">
+                        <div class="card info">
                             <div class="card-content">
                                 <p>' . $row['title'] . '</p>
                                 <p>' . $row['rating'] . '/10' . '</p>
