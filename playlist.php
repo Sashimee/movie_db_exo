@@ -52,6 +52,7 @@
                                 </div>
                                 </a>
                         </div>
+                        </div>
                         <div class="card info">
                             <div class="card-content">
                                 <p class="info-mov-title">' . $row['title'] . '</p>
@@ -60,27 +61,26 @@
                                 <p>' . $row['category'] . '</p>
                                 <p>' . 'Synopsis: '  . $row['synopsis'] . '</p>
                             </div>
-                        </div>
                     </div>';
                 } elseif ($title) {
                     echo '
                     <div class="col s3">
                         <div class="card">
-                        <div class="playlistForm">
-                        <form method="post">
-                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
-                        </form>
-                        <form method="post">
-                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
-                        </form>
-                        </div>
+                            <div class="playlistForm">
+                                <form method="post">
+                                    <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
+                                    <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                                </form>
+                                <form method="post">
+                                    <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
+                                    <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
+                                 </form>
+                            </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
                                     <span class="card-title">' . $row['title'] . '</span>
-                                    </div> 
+                                </div> 
                             </a>
                                     <div class="card info">
                                     <div class="card-content">
@@ -89,7 +89,8 @@
                                     <p>' . $row['release_date'] . '</p>
                                     <p>' . $row['category'] . '</p>
                                     <p>' . 'Synopsis: ' . $row['synopsis'] . '</p>
-                            </div>
+                                    </div>
+                                    </div>
                         </div>
                     </div>';
                 }
