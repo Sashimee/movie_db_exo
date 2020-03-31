@@ -76,8 +76,9 @@
             $movieReleaseDate = $_POST['release-date'];
             $movieRating = $_POST['rating'];
             $query = "INSERT INTO movie(title, poster_url, synopsis, category, release_date, rating) VALUES ('" . $movieTitle . "','" . $moviePoster . "','" . $movieDesc . "','" . $movieCategory . "','" . $movieReleaseDate . "','" . $movieRating . "')";
-            $response = mysqli_query($connect, $query);
-            var_dump($response);
+            mysqli_query($connect, $query);
+            $response = mysqli_insert_id($connect);
+            $_GET['movie_id'] = $response;
         }
     }
     //Populate if movie ID is given
