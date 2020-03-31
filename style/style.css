@@ -74,7 +74,8 @@ body {
     background: #5f9ea0;
     border: none;
     border-radius: 5px;
-    height: 1.5rem;
+    height: 2.5rem;
+    margin-top: 0.5rem;
 }
 
 .error {
