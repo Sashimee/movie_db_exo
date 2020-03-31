@@ -1,14 +1,14 @@
-<?php
+<?php session_start(); ?>
 include_once("nav-bar.php");
 
 if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
+$_SESSION['msg'] = "You must log in first";
+header('location: login.php');
 }
 if (isset($_GET['logout'])) {
 
-    unset($_SESSION['username']);
-    header("location: login.php");
+unset($_SESSION['username']);
+header("location: login.php");
 }
 ?>
 <!DOCTYPE html>
