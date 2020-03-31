@@ -38,8 +38,8 @@
         <form action="details.php" method="post">
             <img src="<?php echo $moviePoster ?>">
             <input type="text" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
-            <input type="text" name="category" id="category" value="<?php echo $movieCategory ?>">
-            <textarea name="description" id="description" cols="30" rows="10" readonly><?php echo $movieDesc ?></textarea>
+            <input type="text" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
+            <textarea name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
