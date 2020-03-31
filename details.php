@@ -31,7 +31,7 @@
         $movieRating = '';
     ?>
         <div class="container">
-            <form action="details.php?movie_id=<?php echo $movieId ?>" method="post">
+            <form action="details.php" method="post">
                 <div class="text-center">
                     <img src="<?php echo $moviePoster ?>">
                 </div>
@@ -55,8 +55,9 @@
     }
     if (isset($_POST['save'])) {
         // echo $_GET['movie_id'];
-        // var_dump($_GET);
+        var_dump($_GET);
         if (isset($_GET['movie_id'])) {
+            echo 'Haaaaaa WATEVVVER YOU NOPED';
             $movieId = $_GET['movie_id'];
             $movieTitle = $_POST['title'];
             $movieCategory = $_POST['category'];
@@ -67,6 +68,7 @@
             $query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
             mysqli_query($connect, $query);
         } else {
+            echo 'Haaaaaa WATEVVVER';
             $movieTitle = $_POST['title'];
             $movieCategory = $_POST['category'];
             $movieDesc = $_POST['description'];

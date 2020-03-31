@@ -9,8 +9,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<?php require_once 'nav-bar.php';
-require_once 'database.php'; ?>
+<?php
+require_once 'nav-bar.php';
+include_once('DataPlaylist.php');
+include_once('database.php');
+$db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+session_start();
+?>
 
 <body id="cat-bod">
     <div class="container">
@@ -49,6 +54,13 @@ require_once 'database.php'; ?>
                     echo '
                     <div class="col s3">
                         <div class="card">
+                        <div class="playlistForm">
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
+                        </form>
+                        </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
@@ -69,6 +81,13 @@ require_once 'database.php'; ?>
                     echo '
                     <div class="col s3">
                         <div class="card">
+                        <div class="playlistForm">
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
+                        </form>
+                        </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
