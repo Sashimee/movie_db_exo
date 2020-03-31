@@ -19,7 +19,9 @@ function clickFunction() {
   $.ajax({
     type: "POST",
     url: "getByCat.php",
-    data: cat,
+    data: {
+      category: cat
+    },
     success: function(res) {
       $("#sResult").html(res);
     },
