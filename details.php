@@ -67,6 +67,7 @@
             $query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
             mysqli_query($connect, $query);
         } else {
+            echo 'Haaaaaa WATEVVVER';
             $movieTitle = $_POST['title'];
             $movieCategory = $_POST['category'];
             $movieDesc = $_POST['description'];
