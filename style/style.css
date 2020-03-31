@@ -29,14 +29,6 @@ body {
   padding: 20px;
 }
 
-.playlistbtn {
-  margin: auto;
-}
-
-.playlistForm {
-  display: flex;
-}
-
 .content {
   width: 30%;
   margin: 0px auto;
