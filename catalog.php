@@ -31,6 +31,7 @@ include_once('DataPlaylist.php'); ?>
                     ?>
                 </select>
             </div>
+            <div id="sResult"></div>
             <?php
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
             $res = mysqli_query($connect, $query);
@@ -51,7 +52,7 @@ include_once('DataPlaylist.php'); ?>
                         <div class="playlistForm">
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="button" class="playlistbtn" name="addMovPlaylist">Add</button>
                         </form>
                         </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
@@ -77,7 +78,7 @@ include_once('DataPlaylist.php'); ?>
                         <div class="playlistForm">
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="button" class="playlistbtn" name="addMovPlaylist">Add</button>
                         </form>
                         </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
@@ -100,9 +101,6 @@ include_once('DataPlaylist.php'); ?>
                 }
             }
             mysqli_close($connect);
-            if (isset($_POST)) {
-                var_dump($_POST);
-            }
             ?>
         </div>
     </div>

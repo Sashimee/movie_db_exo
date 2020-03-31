@@ -15,11 +15,16 @@ $(".col").mouseleave(function(e) {
 $(document).ready($("#catSel").on("change", clickFunction));
 
 function clickFunction() {
-  console.log($(this).val());
   const cat = $(this).val();
   $.ajax({
     type: "POST",
-    url: "catalog.php",
-    data: cat
+    url: "getByCat.php",
+    data: cat,
+    success: function(res) {
+      $("#sResult").html(res);
+    },
+    error: function(err) {
+      $("#sResult").html(err);
+    }
   });
 }
