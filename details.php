@@ -39,6 +39,8 @@
             <img src="<?php echo $moviePoster ?>">
             <input type="text" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
             <input type="text" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
+            <input type="text" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
+            <input type="text" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
             <textarea name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
         </form>
     </div>
