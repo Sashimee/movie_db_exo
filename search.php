@@ -49,6 +49,12 @@ session_start();
                     </div>
                     <div class="card info">
                         <div class="card-content">
+                        <div class="playlistForm">
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        </form>
+                        </div>
                             <p class="info-mov-title">' . $row['title'] . '</p>
                             <p>' . $row['rating'] . '/10' . '</p>
                             <p>' . $row['release_date'] . '</p>
@@ -70,6 +76,12 @@ session_start();
                     </div>
                     <div class="card info">
                         <div class="card-content">
+                        <div class="playlistForm">
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
+                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        </form>
+                        </div>
                             <p class="info-mov-title">' . $row['title'] . '</p>
                             <p>' . $row['rating'] . '/10' . '</p>
                             <p>' . $row['release_date'] . '</p>
