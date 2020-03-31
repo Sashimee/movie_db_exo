@@ -15,6 +15,5 @@ $(".col").mouseleave(function(e) {
 $(document).ready($("#catSel").on("change", clickFunction));
 
 function clickFunction() {
-  console.log("ree");
   console.log($(this).val());
 }
