@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <?php session_start() ?>
 
   <nav>
     <div class="nav-wrapper grey darken-4">
