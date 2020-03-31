@@ -6,10 +6,8 @@ $(".col").mouseleave(function(e) {
   const infoCard = $(this).find(".info");
   infoCard.hide();
 });
-$(document).ready(function() {
-  $("select").formSelect();
-});
 $("select").click(function() {
+  console.log("test");
   $("option").click(function(e) {
     console.log(this.val());
     console.log("ree");
