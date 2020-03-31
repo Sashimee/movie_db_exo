@@ -21,13 +21,12 @@ include_once('DataPlaylist.php'); ?>
                 <select class="browser-default" id="catSel">
                     <option value="0" disabled selected>Choose your category</option>
                     <?php
-                    $i = 0;
                     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
                     $catQuery = 'SELECT DISTINCT category FROM movie';
                     $catRes = mysqli_query($connect, $catQuery);
                     while ($row = mysqli_fetch_assoc($catRes)) {
                         $i++;
-                        echo '<option value="' . $i . '">' . $row['category'] . '</option>';
+                        echo '<option value="' . $row['category'] . '">' . $row['category'] . '</option>';
                     }
                     ?>
                 </select>
