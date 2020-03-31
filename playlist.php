@@ -64,6 +64,8 @@
                                 <div class="card-image">
                                     <img class="poster hoverable" src="' . $image . '">
                                     <span class="card-title">' . $row['title'] . '</span>
+                                    <button type="submit" class="" name="addMovPlaylist">Add Playlist</button>
+                                    <button type="submit" class="" name="delMovPlaylist">Remove Playlist</button>
                                 </div> 
                             </a>       
                         </div>
@@ -75,8 +77,6 @@
                                 <p>' . $row['category'] . '</p>
                                 <p>' . 'Synopsis: ' . $row['synopsis'] . '</p>
                                 <form class="" method="post">
-                                <button type="submit" class="" name="addMovPlaylist">Add to Playlist</button>
-                                <button type="submit" class="" name="delMovPlaylist">Remove from Playlist</button>
                                 </form>
                             </div>
                         </div>
