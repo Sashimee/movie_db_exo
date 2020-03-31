@@ -13,11 +13,11 @@
     <div class="container">
         <div class="row">
             <?php
+            require_once 'nav-bar.php';
             require_once 'database.php';
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
             $res = mysqli_query($connect, $query);
-            $storageArr = [];
             while ($row = mysqli_fetch_assoc($res)) {
                 $image = $row['poster_url'];
                 $title = false;
@@ -70,13 +70,6 @@
                         </div>
                     </div>';
                 }
-                array_push($storageArr, array(
-                    'title' => $row['title'],
-                    'rating' => $row['rating'],
-                    'release' => $row['release_date'],
-                    'cat' => $row['category'],
-                    'synopsis' => $row['synopsis']
-                ));
             }
             var_dump($storageArr);
             ?>
