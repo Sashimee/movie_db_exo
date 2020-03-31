@@ -28,10 +28,12 @@
     }
     ?>
 
-    <div class="card" style="width: 18rem;">
-        <img src="<?php echo $moviePoster ?>" class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text"><?php echo $movieTitle ?></p>
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <img src="<?php echo $moviePoster ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><?php echo $movieTitle ?></p>
+            </div>
         </div>
     </div>
 
