@@ -48,11 +48,11 @@ $user = mysqli_fetch_assoc($result);
                 $password = md5($user['password']);
                 $update_query1 = "UPDATE user SET email = '$email', username = '$username', password = '$password' WHERE user_id = '$user_id'";
                 mysqli_query($db, $update_query1);
-                var_dump('$update_query1');
+                var_dump($update_query1);
             } else {
                 $update_query2 = "UPDATE user SET email = '$email', username = '$username' WHERE user_id = '$user_id'";
                 mysqli_query($db, $update_query2);
-                var_dump('$update_query2');
+                var_dump($update_query2);
             }
         }
         ?>
