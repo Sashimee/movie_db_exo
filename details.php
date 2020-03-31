@@ -55,7 +55,7 @@
     }
     if (isset($_POST['save'])) {
         // echo $_GET['movie_id'];
-        // var_dump($_GET);
+        var_dump($_GET);
         if (isset($_GET['movie_id'])) {
             echo 'Haaaaaa WATEVVVER YOU NOPED';
             $movieId = $_GET['movie_id'];
