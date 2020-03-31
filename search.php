@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('DataPlaylist.php');
 ?>
 
 <!DOCTYPE html>
@@ -40,21 +41,21 @@ session_start();
                     if (!$title) {
                         echo '
                 <div class="col s3">
-                    <div class="card">
-                        <a href="details.php?movie_id=' . $row['movie_id'] . '">
-                            <div class="card-image">
-                                <img class="poster hoverable" src="' . $image . '">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card info">
-                        <div class="card-content">
-                        <div class="playlistForm">
-                        <form method="post">
-                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
-                        </form>
-                        </div>
+                <div class="card">
+                <div class="playlistForm">
+                <form method="post">
+                <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
+                <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                </form>
+                </div>
+                <a href="details.php?movie_id=' . $row['movie_id'] . '">
+                <div class="card-image">
+                <img class="poster hoverable" src="' . $image . '">
+                </div>
+                </a>
+                </div>
+                <div class="card info">
+                <div class="card-content">
                             <p class="info-mov-title">' . $row['title'] . '</p>
                             <p>' . $row['rating'] . '/10' . '</p>
                             <p>' . $row['release_date'] . '</p>
@@ -67,6 +68,11 @@ session_start();
                         echo '
                 <div class="col s3">
                     <div class="card">
+                    <div class="playlistForm">
+                    <form method="post">
+                    <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
+                    <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                    </form>
                         <a href="details.php?movie_id=' . $row['movie_id'] . '">
                             <div class="card-image">
                                 <img class="poster hoverable" src="' . $image . '">
@@ -76,11 +82,6 @@ session_start();
                     </div>
                     <div class="card info">
                         <div class="card-content">
-                        <div class="playlistForm">
-                        <form method="post">
-                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
-                        </form>
                         </div>
                             <p class="info-mov-title">' . $row['title'] . '</p>
                             <p>' . $row['rating'] . '/10' . '</p>
