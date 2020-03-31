@@ -1,6 +1,6 @@
 <?php
 //PLAYLIST SECTION
-$movieId = $row['movie_id'];
+$movieId = $_POST['movieIdHex'];
 include_once('database.php');
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 
