@@ -12,5 +12,6 @@ $(document).ready(function() {
 $("select").click(function() {
   $("option").click(function(e) {
     console.log(this.val());
+    console.log("ree");
   });
 });
