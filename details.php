@@ -85,7 +85,12 @@
         $answer = mysqli_query($connect, $query);
         $movie = mysqli_fetch_assoc($answer);
         $movieTitle = $movie['title'];
-        $moviePoster = $movie['poster_url'];
+        if ($movie['poster_url'] == 'https://image.tmdb.org/t/p/w500') {
+            $moviePoster = 'https://dummyimage.com/500x750/000/fff';
+        } else {
+            $moviePoster = $movie['poster_url'];
+        }
+
         $movieCategory = $movie['category'];
         $movieDesc = $movie['synopsis'];
         $movieReleaseDate = $movie['release_date'];
