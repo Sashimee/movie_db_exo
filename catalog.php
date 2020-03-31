@@ -71,9 +71,9 @@
                     </div>';
                 }
                 array_push($storageArr, $row['title'], $row['rating'], $row['release_date'], $row['category'], $row['synopsis']);
-                var_dump($storageArr);
-                var_dump($_POST);
             }
+            var_dump($storageArr);
+            var_dump($_POST);
             ?>
         </div>
 
