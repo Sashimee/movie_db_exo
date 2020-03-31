@@ -57,6 +57,7 @@
         // echo $_GET['movie_id'];
         // var_dump($_GET);
         if (isset($_GET['movie_id'])) {
+            echo 'Haaaaaa WATEVVVER YOU NOPED';
             $movieId = $_GET['movie_id'];
             $movieTitle = $_POST['title'];
             $movieCategory = $_POST['category'];
@@ -67,6 +68,7 @@
             $query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
             mysqli_query($connect, $query);
         } else {
+            echo 'Haaaaaa WATEVVVER';
             $movieTitle = $_POST['title'];
             $movieCategory = $_POST['category'];
             $movieDesc = $_POST['description'];
