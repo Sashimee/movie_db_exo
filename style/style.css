@@ -29,7 +29,8 @@ body {
   padding: 20px;
 }
 
-.formForm .content {
+form,
+.content {
   width: 30%;
   margin: 0px auto;
   padding: 20px;
