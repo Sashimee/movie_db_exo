@@ -15,6 +15,7 @@
         <div class="row">
             <?php
             require_once 'database.php';
+            require_once 'DataPlaylist.php';
             $user_id = $_SESSION['user_id'];
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $user_playlist = "SELECT * FROM playlist WHERE user_id= $user_id";
