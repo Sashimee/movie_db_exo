@@ -1,5 +1,6 @@
-$("#edit").on("click") = function() {
-    $('input').removeAttr("readonly");
-    console.log('Hi');
+$("#edit").on("click", switchEdit);
 
+function switchEdit() {
+    $('input').removeAttr("readonly");
+    $('textarea').removeAttr("readonly");
 }
