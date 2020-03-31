@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body> //id="cat-bod">
+<body>
+    <!-- <body> //id="cat-bod"> -->
     <?php
     // session_start();
     // NAVBAR
