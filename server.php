@@ -5,7 +5,7 @@ $username = "";
 $email    = "";
 $errors = array();
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-
+$sessionId = $_SESSION['user_id'];
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
