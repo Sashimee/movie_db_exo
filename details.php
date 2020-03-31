@@ -17,6 +17,18 @@
     // DB Info + Connection
     require_once 'database.php';
     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+    // Save the new info if edited
+    if (isset($_POST['save'])) {
+        $movieId = $_GET['movie_id'];
+        $movieTitle = $_POST['title'];
+        $movieCategory = $_POST['category'];
+        $movieDesc = $_POST['description'];
+        $movieReleaseDate = $_POST['release-date'];
+        $movieRating = $movie['rating'];
+        $query = "UPDATE movie SET title = '$movieTitle', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', description = '$movieDesc'  WHERE movie_id = '$movieId'";
+        mysqli_query($connect, $query);
+    }
+    //Populate if movie ID is given
     if (isset($_GET['movie_id'])) {
         $movieId = $_GET['movie_id'];
         $query = "SELECT * FROM movie WHERE movie_id = '$movieId'";
@@ -28,7 +40,6 @@
         $movieDesc = $movie['synopsis'];
         $movieReleaseDate = $movie['release_date'];
         $movieRating = $movie['rating'];
-        mysqli_close($connect);
     ?>
         <div class="container">
             <form action="details.php?movie_id=<?php echo $movieId ?>" method="post">
@@ -38,7 +49,7 @@
                 <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
                 <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
                 <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
-                <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating . "/10" ?>" readonly>
+                <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
                 <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
                 <button type="submit" name="save">Sav-E</button>
             </form>
@@ -53,6 +64,7 @@
     } else {
         echo 'No Movie selected ....';
     }
+    mysqli_close($connect);
     ?>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
