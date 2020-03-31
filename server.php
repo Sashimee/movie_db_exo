@@ -5,7 +5,7 @@ $username = "";
 $email    = "";
 $errors = array();
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-$user_id = $_SESSION['user_id'];
+
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -46,6 +46,7 @@ if (isset($_POST['reg_user'])) {
     // REGISTER
     if (count($errors) == 0) {
         $password = md5($password_1); //encrypt the password before saving in the database
+        $user_id = $_SESSION['user_id'];
 
         $query = "INSERT INTO user (username, email, password, session_id) 
   			  VALUES('$username', '$email', '$password', '$sessionId')";
