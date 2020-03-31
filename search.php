@@ -33,26 +33,47 @@ session_start();
                 $image = $row['poster_url'];
                 $title = false;
             }
-            if ($title) {
+            if (!$title) {
                 echo '
-            <div class="col s3">
-                <div class="card">
-                    <a href="details.php?movie_id=' . $row['movie_id'] . '">
-                        <div class="card-image">
-                            <img class="poster hoverable" src="' . $image . '">
-                        </div>
-                    </a>
-                </div>
-                <div class="card info">
-                    <div class="card-content">
-                        <p>' . $row['title'] . '</p>
-                        <p>' . $row['rating'] . '/10' . '</p>
-                        <p>' . $row['release_date'] . '</p>
-                        <p>' . $row['category'] . '</p>
-                        <p>' . 'Synopsis: '  . $row['synopsis'] . '</p>
+                <div class="col s3">
+                    <div class="card">
+                        <a href="details.php?movie_id=' . $row['movie_id'] . '">
+                            <div class="card-image">
+                                <img class="poster hoverable" src="' . $image . '">
+                            </div>
+                        </a>
                     </div>
-                </div>
-            </div>';
+                    <div class="card info">
+                        <div class="card-content">
+                            <p class="info-mov-title">' . $row['title'] . '</p>
+                            <p>' . $row['rating'] . '/10' . '</p>
+                            <p>' . $row['release_date'] . '</p>
+                            <p>' . $row['category'] . '</p>
+                            <p>' . 'Synopsis: '  . $row['synopsis'] . '</p>
+                        </div>
+                    </div>
+                </div>';
+            } elseif ($title) {
+                echo '
+                <div class="col s3">
+                    <div class="card">
+                        <a href="details.php?movie_id=' . $row['movie_id'] . '">
+                            <div class="card-image">
+                                <img class="poster hoverable" src="' . $image . '">
+                                <span class="card-title">' . $row['title'] . '</span>
+                            </div> 
+                        </a>       
+                    </div>
+                    <div class="card info">
+                        <div class="card-content">
+                            <p class="info-mov-title">' . $row['title'] . '</p>
+                            <p>' . $row['rating'] . '/10' . '</p>
+                            <p>' . $row['release_date'] . '</p>
+                            <p>' . $row['category'] . '</p>
+                            <p>' . 'Synopsis: ' . $row['synopsis'] . '</p>
+                        </div>
+                    </div>
+                </div>';
             }
         }
     }
