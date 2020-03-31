@@ -32,7 +32,11 @@
                     <div class="col s3">
                         <div class="card">
                             <div class="card-image">
-                                <img class="poster hoverable" src="' . $image . '">
+                                <div class="view overlay">
+                                    <img class="poster" src="' . $image . '">
+                                    <div class="mask rgba-stylish-strong">
+                                    </div>
+                                </div>
                             </div>        
                         </div>
                         <div class="card-content info">
@@ -50,7 +54,11 @@
                     <div class="col s3">
                         <div class="card">
                             <div class="card-image">
-                                <img class="poster hoverable" src="' . $image . '">
+                                <div class="view overlay">
+                                    <img class="poster" src="' . $image . '">
+                                    <div class="mask rgba-stylish-strong">
+                                    </div>
+                                </div>
                                 <span class="card-title">' . $row['title'] . '</span>
                             </div>        
                         </div>
