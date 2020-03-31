@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <?php require_once 'nav-bar.php';
-include_once('DataPlaylist.php'); ?>
+include_once('DataPlaylist.php');
+session_start(); ?>
 
 <body id="cat-bod">
     <div class="container">
