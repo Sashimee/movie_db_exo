@@ -44,8 +44,8 @@ $user = mysqli_fetch_assoc($result);
             $newEmail = mysqli_real_escape_string($db, $_POST['email']);
             $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
             $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-            if (!empty($user['password_1'])) {
-                $password = md5($user['password']);
+            if (!empty($_POST['password_1'])) {
+                $password = md5($password_1);
                 $update_query1 = "UPDATE user SET email = '$newEmail', username = '$newUserName', password = '$password' WHERE user_id = '$user_id'";
                 mysqli_query($db, $update_query1);
                 var_dump($update_query1);
