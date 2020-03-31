@@ -2,6 +2,7 @@
 //PLAYLIST SECTION
 include_once('database.php');
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+$user_id = $_SESSION['user_id'];
 
 //UserPlaylistRecover
 $user_playlist_query = "SELECT * FROM playlist WHERE user_id= $user_id";
