@@ -6,7 +6,15 @@ $(".col").mouseleave(function(e) {
   const infoCard = $(this).find(".info");
   infoCard.hide();
 });
-$("option").click(function(e) {
+
+// $("option").click(function(e) {
+//   console.log("ree");
+//   console.log(this.val());
+// });
+
+$(document).ready($("option").on("click", clickFunction));
+
+function clickFunction() {
   console.log("ree");
   console.log(this.val());
-});
+}
