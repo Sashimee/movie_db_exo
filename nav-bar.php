@@ -10,13 +10,25 @@
 </head>
 
 <body>
+  <?php session_start();
+  if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+
+    unset($_SESSION['username']);
+    header("location: login.php");
+  }
+  ?>
 
   <nav>
     <div class="nav-wrapper grey darken-4">
       <span class="brand-logo">Anything The Movies</span>
-      <a href="userpage.php" class="brand-logo center">Welcome</a>
+      <a href="userpage.php" class="brand-logo center">Welcome <strong><?php echo $_SESSION['username']; ?></strong></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="userpage.php">User</a></li>
+        <li><a href="playlist.php">Playlist</a></li>
         <li><a href="catalog.php">Movies</a></li>
         <li><a href="index.php?logout='1'">Log Out</a></li>
         <div class="input-field inline">

@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <?php require_once 'nav-bar.php';
-session_start();
 include_once('DataPlaylist.php'); ?>
 
 <body id="cat-bod">
     <div class="container">
         <div class="row">
-            <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Release</a>
+            <!-- <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Release</a> -->
             <div class="input-field col s12">
-                <select>
-                    <option value="0" disabled selected>Choose your option</option>
+                <select class="browser-default">
+                    <option value="0" disabled selected>Choose your category</option>
                     <?php
                     $i = 0;
                     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
@@ -31,7 +30,6 @@ include_once('DataPlaylist.php'); ?>
                     }
                     ?>
                 </select>
-                <label>Materialize Select</label>
             </div>
             <?php
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
@@ -54,7 +52,6 @@ include_once('DataPlaylist.php'); ?>
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
-                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
                         </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
@@ -81,7 +78,6 @@ include_once('DataPlaylist.php'); ?>
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
-                        <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
                         </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">

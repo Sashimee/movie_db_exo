@@ -29,14 +29,7 @@ body {
   padding: 20px;
 }
 
-.playlistbtn {
-  margin: auto;
-}
-
-.playlistForm {
-  display: flex;
-}
-
+.formForm,
 .content {
   width: 30%;
   margin: 0px auto;
