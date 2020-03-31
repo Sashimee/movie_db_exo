@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
+<body id="cat-bod">
     <!-- <body> //id="cat-bod"> -->
     <?php
     // session_start();
@@ -113,7 +113,7 @@
         </div>
     <?php
     } else {
-        echo 'No Movie selected ......';
+        echo '';
     }
     mysqli_close($connect);
     ?>
