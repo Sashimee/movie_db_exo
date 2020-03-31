@@ -11,6 +11,8 @@
 
 <body id="cat-bod">
     <?php
+    // NAVBAR
+    include_once("nav-bar.php");
     // DB Info + Connection
     require_once 'database.php';
     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
