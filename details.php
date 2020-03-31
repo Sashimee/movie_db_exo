@@ -38,11 +38,11 @@
             <div class="text-center">
                 <img src="<?php echo $moviePoster ?>">
             </div>
-            <input type="text" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
-            <input type="text" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
-            <input type="text" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
-            <input type="text" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
-            <textarea name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
+            <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
+            <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
+            <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
+            <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
+            <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
