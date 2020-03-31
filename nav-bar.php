@@ -33,7 +33,7 @@
         <li><a href="index.php?logout='1'">Log Out</a></li>
         <div class="input-field inline">
           <form action="search.php" method="get">
-            <input id="search_inline" type="search" name="searchName" class="validate">
+            <input id="search_inline" type="text" name="searchName">
             <label for="search_inline">Search</label>
           </form>
         </div>
