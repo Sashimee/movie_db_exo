@@ -48,12 +48,10 @@ $user = mysqli_fetch_assoc($result);
                 $password = md5($password_1);
                 $update_query1 = "UPDATE user SET email = '$newEmail', username = '$newUserName', password = '$password' WHERE user_id = '$user_id'";
                 mysqli_query($db, $update_query1);
-                var_dump($update_query1);
                 header('location: userpage.php');
             } else {
                 $update_query2 = "UPDATE user SET email = '$newEmail', username = '$newUserName' WHERE user_id = '$user_id'";
                 mysqli_query($db, $update_query2);
-                var_dump($update_query2);
                 header('location: userpage.php');
             }
         }
