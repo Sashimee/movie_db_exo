@@ -57,7 +57,6 @@
         // echo $_GET['movie_id'];
         var_dump($_GET);
         if (isset($_GET['movie_id'])) {
-            echo 'Haaaaaa WATEVVVER YOU NOPED';
             $movieId = $_GET['movie_id'];
             $movieTitle = $_POST['title'];
             $movieCategory = $_POST['category'];
@@ -68,7 +67,6 @@
             $query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
             mysqli_query($connect, $query);
         } else {
-            echo 'Haaaaaa WATEVVVER';
             $movieTitle = $_POST['title'];
             $movieCategory = $_POST['category'];
             $movieDesc = $_POST['description'];
@@ -78,7 +76,7 @@
             $query = "INSERT INTO movie(title, poster_url, synopsis, category, release_date, rating) VALUES ('" . $movieTitle . "','" . $moviePoster . "','" . $movieDesc . "','" . $movieCategory . "','" . $movieReleaseDate . "','" . $movieRating . "')";
             mysqli_query($connect, $query);
             $response = mysqli_insert_id($connect);
-            $_GET['movie_id'] = $response;
+            $_GET['movie_id'] = $response; // put it there so the page get's regene'd with the good stuff
         }
     }
     //Populate if movie ID is given
