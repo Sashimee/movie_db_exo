@@ -51,7 +51,7 @@ include_once('DataPlaylist.php'); ?>
                         <div class="playlistForm">
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="button" class="playlistbtn" name="addMovPlaylist">Add</button>
                         </form>
                         </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
@@ -77,7 +77,7 @@ include_once('DataPlaylist.php'); ?>
                         <div class="playlistForm">
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
-                        <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        <button type="button" class="playlistbtn" name="addMovPlaylist">Add</button>
                         </form>
                         </div>
                             <a href="details.php?movie_id=' . $row['movie_id'] . '">
