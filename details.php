@@ -25,7 +25,7 @@
         $movieTitle = '';
         $movieCategory = '';
         $movieDesc = '';
-        $moviePoster = '';
+        $moviePoster = 'https://dummyimage.com/500x750/000/fff';
         $movieReleaseDate = '';
         $movieRating = '';
     ?>
