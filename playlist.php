@@ -37,7 +37,7 @@
                         <div class="card">
                         <div class="playlistForm">
                         <form method="post">
-                        <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
+                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
                         <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
@@ -64,7 +64,7 @@
                         <div class="card">
                         <div class="playlistForm">
                         <form method="post">
-                        <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
+                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
                         <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
