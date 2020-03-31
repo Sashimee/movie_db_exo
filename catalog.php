@@ -37,7 +37,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="card-content info">
+                        <div class="card info">
                             <div class="card-content">
                                 <p>' . $row['title'] . '</p>
                                 <p>' . $row['rating'] . '/10' . '</p>
@@ -58,7 +58,7 @@
                                 </div> 
                             </a>       
                         </div>
-                        <div class="card-content info">
+                        <div class="card info">
                             <div class="card-content">
                                 <p>' . $row['title'] . '</p>
                                 <p>' . $row['rating'] . '/10' . '</p>
