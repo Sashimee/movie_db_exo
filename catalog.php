@@ -21,6 +21,7 @@
             <option value="" disabled selected>Choose your option</option>
             <?php
             $i = 0;
+            require_once 'database.php';
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $catQuery = 'SELECT DISTINCT category FROM movie';
             $catRes = mysqli_query($connect, $catQuery);
@@ -35,7 +36,6 @@
     <div class="container">
         <div class="row">
             <?php
-            require_once 'database.php';
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
             $res = mysqli_query($connect, $query);
             while ($row = mysqli_fetch_assoc($res)) {
@@ -91,6 +91,7 @@
                     </div>';
                 }
             }
+            mysqli_close($connect);
             ?>
         </div>
     </div>
