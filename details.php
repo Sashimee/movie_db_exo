@@ -41,10 +41,10 @@
             <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
             <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
             <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
-            <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
+            <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating . "/10" ?>" readonly>
             <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
         </form>
-        <button>Edit</button>
+        <button id="edit">Edit</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
