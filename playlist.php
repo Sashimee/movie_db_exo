@@ -22,7 +22,6 @@
             $res = mysqli_query($connect, $user_playlist);
             $storageArr = [];
             while ($row = mysqli_fetch_assoc($res)) {
-
                 $image = $row['poster_url'];
                 $title = false;
                 if (strlen($image) == 31) {
@@ -42,6 +41,7 @@
                                 </div>
                                 </a>
                                 <form class="formForm" method="post">
+                                <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
                                 <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
                                 <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
                                 </form>
@@ -67,6 +67,7 @@
                                     </div> 
                                     </a>       
                                     <form class="" method="post">
+                                    <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
                                     <button type="submit" class="" name="addMovPlaylist">Add Playlist</button>
                                     <button type="submit" class="" name="delMovPlaylist">Remove Playlist</button>
                                 </form>
@@ -83,29 +84,6 @@
                     </div>';
                 }
                 array_push($storageArr, $row['title'], $row['rating'], $row['release_date'], $row['category'], $row['synopsis']);
-                //PLAYLIST SECTION
-                $movieId = $row['movie_id'];
-                include_once('database.php');
-                $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-
-                //UserPlaylistRecover
-                $user_playlist_query = "SELECT * FROM playlist WHERE user_id= $user_id";
-                $result = mysqli_query($db, $user_playlist_query);
-                $playlist = mysqli_fetch_assoc($result);
-
-                //ADD Movie to Playlist
-                if (isset($_POST['addMovPlaylist'])) {
-                    $addMovPlaylist = "INSERT INTO playlist (user_id, movie_id) VALUES ($user_id, $movieId)";
-                    var_dump($addMovPlaylist);
-                    mysqli_query($db, $addMovPlaylist);
-                }
-
-                //REMOVE from playlist
-                if (isset($_POST['delMovPlaylist'])) {
-                    $delMovPlaylist = "DELETE FROM playlist WHERE user_id= $user_id AND movie_id= $movieId";
-                    var_dump($delMovPlaylist);
-                    mysqli_query($db, $delMovPlaylist);
-                }
             }
             ?>
         </div>
