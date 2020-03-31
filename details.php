@@ -19,11 +19,24 @@
         $query = "SELECT * FROM movie WHERE movie_id = '$movieId'";
         $answer = mysqli_query($connect, $query);
         $movie = mysqli_fetch_assoc($answer);
+        $movieTitle = $movie['title'];
+        $moviePoster = $movie['poster_url'];
         var_dump($movie);
+        mysqli_close($connect);
     } else {
         echo 'No Movie selected ....';
     }
     ?>
+
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <img src="<?php echo $moviePoster ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><?php echo $movieTitle ?></p>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
