@@ -120,7 +120,7 @@ a {
   display: none;
   background-color: #1e2129;
   width: 209%;
-  position: relative; /*Code specifically for bringing mini-info to front*/
+  position: absolute; /*Code specifically for bringing mini-info to front*/
   z-index: 2;
 }
 
