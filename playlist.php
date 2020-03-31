@@ -18,7 +18,7 @@
             $user_id = $_SESSION['user_id'];
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $user_playlist = "SELECT * FROM playlist WHERE user_id= $user_id";
-            $res = mysqli_query($connect, $query);
+            $res = mysqli_query($connect, $user_playlist);
             $storageArr = [];
             while ($row = mysqli_fetch_assoc($res)) {
                 $image = $row['poster_url'];
