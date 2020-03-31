@@ -111,7 +111,7 @@ include_once('DataPlaylist.php'); ?>
             console.log('yo');
             $("#toto").on("change", function(e) {
                 console.log("no its an id");
-                console.log('reeeee' + $(this).val());
+                console.log($(this).val());
             });
         });
     </script>
