@@ -25,7 +25,8 @@
         $movieDesc = $_POST['description'];
         $movieReleaseDate = $_POST['release-date'];
         $movieRating = $_POST['rating'];
-        $query = "UPDATE movie SET title = '$movieTitle', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', description = '$movieDesc'  WHERE movie_id = '$movieId'";
+        $query = "UPDATE movie SET title = '$movieTitle', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', description = '$movieDesc'  WHERE movie_id = $movieId";
+
         mysqli_query($connect, $query);
     }
     //Populate if movie ID is given
