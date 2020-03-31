@@ -12,6 +12,7 @@
 </head>
 
 <body id="cat-bod">
+    <?php include_once("nav-bar.php"); ?>
     <div class="container">
         <div class="row">
             <?php
