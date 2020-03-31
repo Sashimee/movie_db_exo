@@ -20,7 +20,7 @@
     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
     // Blank all the fields
     // Save the new info if edited
-    if (isset($_POST['new'])) {
+    if (isset($_POST['new'])) { // output for new movie
         unset($_GET['movie_id']);
         $movieId = '';
         $movieTitle = '';
@@ -41,10 +41,10 @@
                 <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>">
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>">
                 <textarea class="form-control" name="description" id="description"><?php echo $movieDesc ?></textarea>
-                <button type="submit" name="save">Save</button>
-                <button type="submit" name="new">New</button>
+                <button class="btn" type="submit" name="save">Save</button>
+                <button class="btn" type="submit" name="new">New</button>
             </form>
-            <button id="edit">Edit</button>
+            <button class="btn" id="edit">Edit</button>
             <form class="" method="post">
                 <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
                 <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
@@ -53,7 +53,7 @@
         </div>
     <?php
     }
-    if (isset($_POST['save'])) {
+    if (isset($_POST['save'])) { // Save the form into the DB
         // echo $_GET['movie_id'];
         var_dump($_GET);
         if (isset($_GET['movie_id'])) {
@@ -66,7 +66,7 @@
             $movieRating = $_POST['rating'];
             $query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
             mysqli_query($connect, $query);
-        } else {
+        } else { //Save a new movie into the db
             $movieTitle = $_POST['title'];
             $movieCategory = $_POST['category'];
             $movieDesc = $_POST['description'];
@@ -103,10 +103,10 @@
                 <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
                 <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
-                <button type="submit" name="save">Save</button>
-                <button type="submit" name="new">New</button>
+                <button class="btn" type="submit" name="save">Save</button>
+                <button class="btn" type="submit" name="new">New</button>
             </form>
-            <button id="edit">Edit</button>
+            <button class="btn" id="edit">Edit</button>
             <form class="" method="post">
                 <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
                 <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
@@ -115,7 +115,7 @@
         </div>
     <?php
     } else {
-        echo 'No Movie selected ....';
+        echo 'No Movie selected ......';
     }
     mysqli_close($connect);
     ?>
@@ -126,9 +126,3 @@
 </body>
 
 </html>
-<!--
-TODO
-
-ADD BTN TO ADD OR REMOVE FROM PLAYLIST
-
- -->
