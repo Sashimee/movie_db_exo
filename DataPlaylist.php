@@ -2,6 +2,7 @@
 //PLAYLIST SECTION
 $movieId = $_POST['movieIdHex'];
 include_once('database.php');
+include_once('playlist.php');
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 
 //UserPlaylistRecover
