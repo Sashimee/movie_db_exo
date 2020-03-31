@@ -15,6 +15,18 @@ $(".col").mouseleave(function(e) {
 $(document).ready($("#catSel").on("change", clickFunction));
 
 function clickFunction() {
-  console.log("ree");
-  console.log($(this).val());
+  const cat = $(this).val();
+  $.ajax({
+    type: "POST",
+    url: "getByCat.php",
+    data: {
+      category: cat
+    },
+    success: function(res) {
+      $("#sResult").html(res);
+    },
+    error: function(err) {
+      $("#sResult").html(err);
+    }
+  });
 }

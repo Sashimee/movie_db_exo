@@ -19,7 +19,7 @@
             include_once('DataPlaylist.php');
             $user_id = $_SESSION['user_id'];
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-            $user_playlist = "SELECT * FROM movie INNER JOIN playlist ON movie.movie_id = playlist.movie_id";
+            $user_playlist = "SELECT * FROM movie INNER JOIN playlist ON movie.movie_id = playlist.movie_id AND user_id = $user_id";
             $res = mysqli_query($connect, $user_playlist);
             $storageArr = [];
             while ($row = mysqli_fetch_assoc($res)) {
@@ -40,6 +40,9 @@
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        </form>
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
                         </div>
@@ -67,6 +70,9 @@
                         <form method="post">
                         <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="addMovPlaylist">Add</button>
+                        </form>
+                        <form method="post">
+                        <input style="display:none;" type="text" name="movieIdHex" value="' . $row['movie_id'] . '">
                         <button type="submit" class="playlistbtn" name="delMovPlaylist">Remove</button>
                         </form>
                         </div>

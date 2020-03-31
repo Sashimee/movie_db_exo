@@ -31,6 +31,7 @@ include_once('DataPlaylist.php'); ?>
                     ?>
                 </select>
             </div>
+            <div id="sResult"></div>
             <?php
             $query = 'SELECT * FROM movie ORDER BY rating DESC';
             $res = mysqli_query($connect, $query);
