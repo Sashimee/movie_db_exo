@@ -18,6 +18,7 @@ $user = mysqli_fetch_assoc($result);
 </head> 
 
 <body>
+    <?php include_once("nav-bar.php"); ?>
     <form class="formForm" method="post" action="userpage.php">
         <div class="input-group">
             <label>Username</label>
