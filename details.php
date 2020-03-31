@@ -31,7 +31,7 @@
         $movieReleaseDate = '';
         $movieRating = '';
     ?>
-        <div class="container">
+        <div class="container topmrg">
             <form action="details.php" method="post">
                 <div class="text-center">
                     <img src="<?php echo $moviePoster ?>">
