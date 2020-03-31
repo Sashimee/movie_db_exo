@@ -15,7 +15,7 @@
             <?php
             require_once 'database.php';
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
-            $query = 'SELECT * FROM movie';
+            $query = 'SELECT * FROM movie ORDER BY rating DESC';
             $res = mysqli_query($connect, $query);
             $storageArr = [];
             while ($row = mysqli_fetch_assoc($res)) {
