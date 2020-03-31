@@ -54,8 +54,6 @@
     <?php
     }
     if (isset($_POST['save'])) { // Save the form into the DB
-        // echo $_GET['movie_id'];
-        var_dump($_GET);
         if (isset($_GET['movie_id'])) {
             $movieId = $_GET['movie_id'];
             $movieTitle = $_POST['title'];
