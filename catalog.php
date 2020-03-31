@@ -37,7 +37,7 @@
                         </div>
                         <div class="card info">
                             <div class="card-content">
-                                <h6>' . $row['title'] . '</h6>
+                                <p>' . $row['title'] . '</p>
                                 <p>' . $row['rating'] . '/10' . '</p>
                                 <p>' . $row['release_date'] . '</p>
                                 <p>' . $row['category'] . '</p>
@@ -51,12 +51,12 @@
                         <div class="card">
                             <div class="card-image">
                                 <img class="poster" src="' . $image . '">
-                               <span class="card-title">' . $row['title'] . '</span>
+                                <span class="card-title">' . $row['title'] . '</span>
                             </div>        
                         </div>
                         <div class="card info">
                             <div class="card-content">
-                                <h6>' . $row['title'] . '</h6>
+                                <p>' . $row['title'] . '</p>
                                 <p>' . $row['rating'] . '/10' . '</p>
                                 <p>' . $row['release_date'] . '</p>
                                 <p>' . $row['category'] . '</p>

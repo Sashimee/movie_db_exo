@@ -13,6 +13,8 @@
     include_once('../database.php');
     $dbConnection = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
 
+    // ! PART IS COMMENTED OUT ON PURPOSE ... DONT EXECUTE THIS OR THE DATABASE WILL BE UNHAPPY
+
     // for ($i = 0; $i < 250; $i++) {
     //     $curl = curl_init();
     //     $opts = [
