@@ -1,10 +1,10 @@
 $(".col").mouseenter(function(e) {
-    const infoCard = $(this).find(".info");
-    infoCard.show();
+  const infoCard = $(this).find(".info");
+  infoCard.show();
 });
 $(".col").mouseleave(function(e) {
-    const infoCard = $(this).find(".info");
-    infoCard.hide();
+  const infoCard = $(this).find(".info");
+  infoCard.hide();
 });
 
 // $("option").click(function(e) {
@@ -12,9 +12,9 @@ $(".col").mouseleave(function(e) {
 //   console.log(this.val());
 // });
 
-$("option").on("click", clickFunction)
+$(document).ready($("option").on("click", clickFunction));
 
 function clickFunction() {
-    console.log("ree");
-    console.log(this.val());
+  console.log("ree");
+  console.log(this.val());
 }
