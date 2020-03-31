@@ -66,13 +66,15 @@
                                     <img class="poster hoverable" src="' . $image . '">
                                     <span class="card-title">' . $row['title'] . '</span>
                                     </div> 
-                                    </a>       
+                            </a>
+                                    <div>       
                                     <form class="" method="post">
                                     <input style="display:none;" type="text" name="movieIdHex" id="movieIdHex" value="' . $row['movie_id'] . '">
                                     <button type="submit" class="" name="addMovPlaylist">Add</button>
                                     <button type="submit" class="" name="delMovPlaylist">Remove</button>
-                                </form>
-                                    </div>
+                                      </form>
+                                      </div>
+                                </div>
                                     <div class="card info">
                                     <div class="card-content">
                                     <p class="info-mov-title">' . $row['title'] . '</p>
