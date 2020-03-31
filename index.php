@@ -1,4 +1,5 @@
 <?php
+include_once("nav-bar.php");
 
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
@@ -20,8 +21,7 @@ if (isset($_GET['logout'])) {
 </head>
 
 <body>
-    <?php include_once("nav-bar.php");
-    header('location: catalog.php') ?>
+    <?php header('location: catalog.php') ?>
 
 
     </div>
