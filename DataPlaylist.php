@@ -4,7 +4,7 @@ $user_id = $_SESSION['user_id'];
 
 //UserPlaylistRecover
 $user_playlist_query = "SELECT * FROM playlist WHERE user_id= $user_id";
-$result = mysqli_query($db, $user_check_query);
+$result = mysqli_query($db, $user_playlist_query);
 $playlist = mysqli_fetch_assoc($result);
 
 //ADD Movie to Playlist
