@@ -15,7 +15,7 @@ include_once('DataPlaylist.php'); ?>
 <body id="cat-bod">
     <div class="container">
         <div class="row">
-            <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Release</a>
+            <!-- <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Release</a> -->
             <div class="input-field col s12">
                 <select class="browser-default">
                     <option value="0" disabled selected>Choose your category</option>
