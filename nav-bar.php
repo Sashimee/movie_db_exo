@@ -73,6 +73,11 @@
         <li><a href="userpage.php">User</a></li>
         <li><a href="catalog.php">Movies</a></li>
         <li><a href="index.php?logout='1'">Log Out</a></li>
+        <div class="input-field inline">
+          <input id="search_inline" type="search" name="searchName" class="validate">
+          <label for="search_inline">Search</label>
+
+        </div>
       </ul>
     </div>
   </nav>
