@@ -114,17 +114,20 @@ a {
 
 .col {
   position: relative;
-  z-index: 1;
 }
 
 .info {
   display: none;
   background-color: #1e2129;
-  width: 200%;
+  width: 192%;
   position: absolute; /*Code specifically for bringing mini-info to front*/
   z-index: 2;
 }
 
 .info p {
   color: whitesmoke;
+}
+
+.info-mov-title {
+  font-weight: bold;
 }
