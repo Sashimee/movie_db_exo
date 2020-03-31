@@ -16,6 +16,7 @@
         <div class="row">
             <?php
             require_once 'database.php';
+            include_once('DataPlaylist.php');
             $user_id = $_SESSION['user_id'];
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $user_playlist = "SELECT * FROM movie INNER JOIN playlist ON movie.movie_id = playlist.movie_id";
