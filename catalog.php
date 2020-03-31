@@ -39,7 +39,7 @@
                         </div>
                         <div class="card info">
                             <div class="card-content">
-                                <p>' . $row['title'] . '</p>
+                                <p class="info-mov-title">' . $row['title'] . '</p>
                                 <p>' . $row['rating'] . '/10' . '</p>
                                 <p>' . $row['release_date'] . '</p>
                                 <p>' . $row['category'] . '</p>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="card info">
                             <div class="card-content">
-                                <p>' . $row['title'] . '</p>
+                                <p class="info-mov-title">' . $row['title'] . '</p>
                                 <p>' . $row['rating'] . '/10' . '</p>
                                 <p>' . $row['release_date'] . '</p>
                                 <p>' . $row['category'] . '</p>

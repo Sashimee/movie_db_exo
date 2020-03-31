@@ -127,3 +127,7 @@ a {
 .info p {
   color: whitesmoke;
 }
+
+.info-mov-title {
+  font-weight: bold;
+}
