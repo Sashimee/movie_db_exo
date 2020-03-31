@@ -157,3 +157,7 @@ a {
 .playlistForm {
   background-color: #1e2129;
 }
+.playlistForm button {
+  background-color: #1e2129;
+  color: whitesmoke;
+}
