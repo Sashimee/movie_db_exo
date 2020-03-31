@@ -46,13 +46,15 @@ $user = mysqli_fetch_assoc($result);
             $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
             if (!empty($user['password_1'])) {
                 $password = md5($user['password']);
-                $update_query1 = "UPDATE user SET email = '$newEmail', username = '$newUsername', password = '$password' WHERE user_id = '$user_id'";
+                $update_query1 = "UPDATE user SET email = '$newEmail', username = '$newUserName', password = '$password' WHERE user_id = '$user_id'";
                 mysqli_query($db, $update_query1);
                 var_dump($update_query1);
+                header('location: userpage.php');
             } else {
-                $update_query2 = "UPDATE user SET email = '$newEmail', username = '$newUsername' WHERE user_id = '$user_id'";
+                $update_query2 = "UPDATE user SET email = '$newEmail', username = '$newUserName' WHERE user_id = '$user_id'";
                 mysqli_query($db, $update_query2);
                 var_dump($update_query2);
+                header('location: userpage.php');
             }
         }
         ?>
