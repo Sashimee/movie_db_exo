@@ -119,7 +119,7 @@ a {
 .info {
   display: none;
   background-color: #1e2129;
-  height: 236px;
+  width: 200%;
 }
 
 .info p {
