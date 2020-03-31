@@ -35,12 +35,12 @@
                 <div class="text-center">
                     <img src="<?php echo $moviePoster ?>">
                 </div>
-                <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
-                <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
-                <input type="text" class="form-control" name="posterUrl" id="posterUrl" value="<?php echo $moviePoster ?>" readonly>
-                <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
-                <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
-                <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
+                <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>">
+                <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>">
+                <input type="text" class="form-control" name="posterUrl" id="posterUrl" value="<?php echo $moviePoster ?>">
+                <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>">
+                <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>">
+                <textarea class="form-control" name="description" id="description"><?php echo $movieDesc ?></textarea>
                 <button type="submit" name="save">Save</button>
                 <button type="submit" name="new">New</button>
             </form>
