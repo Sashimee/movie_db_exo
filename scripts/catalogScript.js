@@ -9,7 +9,7 @@ $(".col").mouseleave(function(e) {
 $("select").click(function() {
   console.log("test");
   $("option").click(function(e) {
-    console.log(this.val());
     console.log("ree");
+    console.log(this.val());
   });
 });
