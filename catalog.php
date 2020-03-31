@@ -17,6 +17,7 @@
             $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
             $query = 'SELECT * FROM movie';
             $res = mysqli_query($connect, $query);
+            $storageArr = [];
             while ($row = mysqli_fetch_assoc($res)) {
                 $image = $row['poster_url'];
                 $title = false;
@@ -69,11 +70,13 @@
                         </div>
                     </div>';
                 }
+                array_push($storageArr, $row['title'], $row['rating'], $row['release_date'], $row['category'], $row['synopsis']);
             }
+            var_dump($storageArr);
+            var_dump($_POST);
             ?>
-
-
         </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -53,7 +53,9 @@ session_start();
                     </div>
                 </div>
             </div>';
-            } elseif ($title) {
+            } /*
+            
+            elseif ($title) {
                 echo '
             <div class="col s3">
                 <div class="card">
@@ -74,7 +76,7 @@ session_start();
                     </div>
                 </div>
             </div>';
-            }
+            }*/
         }
     }
 
