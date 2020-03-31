@@ -27,7 +27,6 @@
         $movieDesc = $movie['synopsis'];
         $movieReleaseDate = $movie['release_date'];
         $movieRating = $movie['rating'];
-        var_dump($movie);
         mysqli_close($connect);
     } else {
         echo 'No Movie selected ....';
