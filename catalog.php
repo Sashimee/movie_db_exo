@@ -70,10 +70,15 @@
                         </div>
                     </div>';
                 }
-                array_push($storageArr, $row['title'], $row['rating'], $row['release_date'], $row['category'], $row['synopsis']);
+                array_push($storageArr, array(
+                    'title' => $row['title'],
+                    'rating' => $row['rating'],
+                    'release' => $row['release_date'],
+                    'cat' => $row['category'],
+                    'synopsis' => $row['synopsis']
+                ));
             }
             var_dump($storageArr);
-            var_dump($_POST);
             ?>
         </div>
 
