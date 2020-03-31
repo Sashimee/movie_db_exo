@@ -17,16 +17,49 @@
     // DB Info + Connection
     require_once 'database.php';
     $connect = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+    // Blank all the fields
     // Save the new info if edited
+    if (isset($_POST['new'])) {
+        $movieId = '';
+        $movieTitle = '';
+        $movieCategory = '';
+        $movieDesc = '';
+        $moviePoster = '';
+        $movieReleaseDate = '';
+        $movieRating = '';
+    ?>
+        <div class="container">
+            <form action="details.php?movie_id=<?php echo $movieId ?>" method="post">
+                <div class="text-center">
+                    <img src="<?php echo $moviePoster ?>">
+                </div>
+                <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
+                <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
+                <input type="text" class="form-control" name="posterUrl" id="posterUrl" value="<?php echo $moviePoster ?>" readonly>
+                <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
+                <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
+                <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
+                <button type="submit" name="save">Save</button>
+                <button type="submit" id="new">New</button>
+            </form>
+            <button id="edit">Edit</button>
+            <form class="" method="post">
+                <button type="submit" class="btn" name="addMovPlaylist">Add to Playlist</button>
+                <button type="submit" class="btn" name="delMovPlaylist">Remove from Playlist</button>
+            </form>
+
+        </div>
+    <?php
+    }
     if (isset($_POST['save'])) {
         $movieId = $_GET['movie_id'];
         $movieTitle = $_POST['title'];
         $movieCategory = $_POST['category'];
         $movieDesc = $_POST['description'];
+        $moviePoster = $_POST['posterUrl'];
         $movieReleaseDate = $_POST['release-date'];
         $movieRating = $_POST['rating'];
-        $query = "UPDATE movie SET title = '$movieTitle', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
-        var_dump($query);
+        $query = "UPDATE movie SET title = '$movieTitle', poster_url = '$moviePoster', category = '$movieCategory', release_date = '$movieReleaseDate', rating = '$movieRating', synopsis = '$movieDesc'  WHERE movie_id = $movieId";
         mysqli_query($connect, $query);
     }
     //Populate if movie ID is given
@@ -49,10 +82,12 @@
                 </div>
                 <input type="text" class="form-control" name="title" id="title" value="<?php echo $movieTitle ?>" readonly>
                 <input type="text" class="form-control" name="category" id="category" value="<?php echo $movieCategory ?>" readonly>
+                <input type="text" class="form-control" name="posterUrl" id="posterUrl" value="<?php echo $moviePoster ?>" readonly>
                 <input type="text" class="form-control" name="release-date" id="release-date" value="<?php echo $movieReleaseDate ?>" readonly>
                 <input type="text" class="form-control" name="rating" id="rating" value="<?php echo $movieRating ?>" readonly>
                 <textarea class="form-control" name="description" id="description" readonly><?php echo $movieDesc ?></textarea>
-                <button type="submit" name="save">Sav-E</button>
+                <button type="submit" name="save">Save</button>
+                <button type="submit" id="new">New</button>
             </form>
             <button id="edit">Edit</button>
             <form class="" method="post">
