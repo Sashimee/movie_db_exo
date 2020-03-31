@@ -91,7 +91,7 @@
         $movieReleaseDate = $movie['release_date'];
         $movieRating = $movie['rating'];
     ?>
-        <div class="container">
+        <div class="container topmrg">
             <form action="details.php?movie_id=<?php echo $movieId ?>" method="post">
                 <div class="text-center">
                     <img src="<?php echo $moviePoster ?>">
